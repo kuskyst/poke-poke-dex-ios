@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4862AC90FB1002EC78C /* PokemonCell.swift */; };
+		C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4892AC937D0002EC78C /* Alamofire */; };
 		C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */; };
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
-		C9243FD32AC88C74003EE2FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ViewController.swift */; };
+		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
 		C9243FD62AC88C74003EE2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD42AC88C74003EE2FC /* Main.storyboard */; };
 		C9243FD82AC88C75003EE2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD72AC88C75003EE2FC /* Assets.xcassets */; };
 		C9243FDB2AC88C75003EE2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD92AC88C75003EE2FC /* LaunchScreen.storyboard */; };
@@ -36,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C91DD4862AC90FB1002EC78C /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poke-poke-dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9243FD22AC88C74003EE2FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9243FD22AC88C74003EE2FC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C9243FD52AC88C74003EE2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9243FD72AC88C75003EE2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9243FDA2AC88C75003EE2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91DD4852AC90FA4002EC78C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				C91DD4862AC90FB1002EC78C /* PokemonCell.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
 		C9243FC22AC88C74003EE2FC = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +137,7 @@
 		C9243FFE2AC88C9D003EE2FC /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				C9243FD22AC88C74003EE2FC /* ViewController.swift */,
+				C9243FD22AC88C74003EE2FC /* ListViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 			children = (
 				C9243FFE2AC88C9D003EE2FC /* controller */,
 				C9243FFF2AC88CA7003EE2FC /* storyboard */,
+				C91DD4852AC90FA4002EC78C /* ui */,
 				C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */,
 				C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */,
 			);
@@ -175,6 +188,9 @@
 			dependencies = (
 			);
 			name = "poke-poke-dex";
+			packageProductDependencies = (
+				C91DD4892AC937D0002EC78C /* Alamofire */,
+			);
 			productName = "poke-poke-dex";
 			productReference = C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +263,10 @@
 				Base,
 			);
 			mainGroup = C9243FC22AC88C74003EE2FC;
+			packageReferences = (
+				C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = C9243FCC2AC88C74003EE2FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,7 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9243FD32AC88C74003EE2FC /* ViewController.swift in Sources */,
+				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
+				C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */,
 				C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */,
 				C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */,
 			);
@@ -471,7 +492,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HPMKBR3QXZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "poke-poke-dex/Info.plist";
+				INFOPLIST_FILE = "poke-poke-dex/resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -499,7 +520,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HPMKBR3QXZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "poke-poke-dex/Info.plist";
+				INFOPLIST_FILE = "poke-poke-dex/resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -634,6 +655,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C91DD4892AC937D0002EC78C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9243FC32AC88C74003EE2FC /* Project object */;
 }
