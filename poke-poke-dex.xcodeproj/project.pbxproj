@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4862AC90FB1002EC78C /* PokemonCell.swift */; };
 		C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4892AC937D0002EC78C /* Alamofire */; };
+		C91DD4942AC96CAA002EC78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4922AC96CAA002EC78C /* Main.storyboard */; };
+		C91DD4952AC96CAA002EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */; };
 		C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */; };
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
 		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
-		C9243FD62AC88C74003EE2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD42AC88C74003EE2FC /* Main.storyboard */; };
 		C9243FD82AC88C75003EE2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD72AC88C75003EE2FC /* Assets.xcassets */; };
-		C9243FDB2AC88C75003EE2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD92AC88C75003EE2FC /* LaunchScreen.storyboard */; };
 		C9243FE62AC88C75003EE2FC /* poke_poke_dexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FE52AC88C75003EE2FC /* poke_poke_dexTests.swift */; };
 		C9243FF02AC88C75003EE2FC /* poke_poke_dexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */; };
 		C9243FF22AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */; };
@@ -39,13 +39,13 @@
 
 /* Begin PBXFileReference section */
 		C91DD4862AC90FB1002EC78C /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		C91DD4922AC96CAA002EC78C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poke-poke-dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C9243FD22AC88C74003EE2FC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		C9243FD52AC88C74003EE2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9243FD72AC88C75003EE2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C9243FDA2AC88C75003EE2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9243FDC2AC88C75003EE2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9243FE12AC88C75003EE2FC /* poke-poke-dexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poke-poke-dexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FE52AC88C75003EE2FC /* poke_poke_dexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexTests.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		C9243FFF2AC88CA7003EE2FC /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				C9243FD92AC88C75003EE2FC /* LaunchScreen.storyboard */,
-				C9243FD42AC88C74003EE2FC /* Main.storyboard */,
+				C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */,
+				C91DD4922AC96CAA002EC78C /* Main.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9243FDB2AC88C75003EE2FC /* LaunchScreen.storyboard in Resources */,
+				C91DD4952AC96CAA002EC78C /* LaunchScreen.storyboard in Resources */,
 				C9243FD82AC88C75003EE2FC /* Assets.xcassets in Resources */,
-				C9243FD62AC88C74003EE2FC /* Main.storyboard in Resources */,
+				C91DD4942AC96CAA002EC78C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,25 +348,6 @@
 			targetProxy = C9243FEC2AC88C75003EE2FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C9243FD42AC88C74003EE2FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9243FD52AC88C74003EE2FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C9243FD92AC88C75003EE2FC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9243FDA2AC88C75003EE2FC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C9243FF32AC88C75003EE2FC /* Debug */ = {
@@ -489,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = HPMKBR3QXZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "poke-poke-dex/resource/Info.plist";
@@ -505,6 +486,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kuskyst.poke-poke-dex";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = HPMKBR3QXZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "poke-poke-dex/resource/Info.plist";
@@ -533,6 +517,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kuskyst.poke-poke-dex";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
