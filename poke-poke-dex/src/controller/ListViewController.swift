@@ -6,14 +6,30 @@
 //
 
 import UIKit
+import RxSwift
 
 class ListViewController: UIViewController {
 
+    @IBOutlet private weak var tableView: UITableView!
+
+    private let viewModel = ListViewModel()
+    private var disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        viewModel.pokemons
+            .bind(to: tableView.rx.items(
+                cellIdentifier: PokemonCell.identifier,
+                cellType: PokemonCell.self)) { row, element, cell in
+                    cell.configureCell(model: element, row: row)
+                }
+            .disposed(by: disposeBag)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.requestPokeList()
+    }
 
 }
-

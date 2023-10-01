@@ -104,6 +104,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="リスト" image="list.bullet" catalog="system" id="orc-0k-dGq"/>
+                    <connections>
+                        <outlet property="tableView" destination="CTE-QX-Aay" id="W2O-lF-XcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lz0-ce-XnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

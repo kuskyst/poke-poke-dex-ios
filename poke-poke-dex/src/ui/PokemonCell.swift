@@ -9,6 +9,7 @@ import UIKit
 
 class PokemonCell: UITableViewCell {
 
+    static var identifier = "PokemonCell"
     // ID
     internal var id: Int!
     // 名称
@@ -22,6 +23,10 @@ class PokemonCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+
+    func configureCell(model: ListResponse.Results, row: Int) {
+        name.text = model.name
     }
 
 }

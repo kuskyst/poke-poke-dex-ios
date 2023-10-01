@@ -11,6 +11,12 @@
 		C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4892AC937D0002EC78C /* Alamofire */; };
 		C91DD4942AC96CAA002EC78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4922AC96CAA002EC78C /* Main.storyboard */; };
 		C91DD4952AC96CAA002EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */; };
+		C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4972AC973CA002EC78C /* ListViewModel.swift */; };
+		C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD49A2AC9748F002EC78C /* RxSwift */; };
+		C91DD49D2AC97494002EC78C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD49C2AC97494002EC78C /* RxRelay */; };
+		C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD49E2AC97497002EC78C /* RxCocoa */; };
+		C91DD4A42AC976E9002EC78C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4A32AC976E9002EC78C /* ListModel.swift */; };
+		C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4A52AC9778A002EC78C /* DetailModel.swift */; };
 		C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */; };
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
 		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
@@ -41,6 +47,9 @@
 		C91DD4862AC90FB1002EC78C /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		C91DD4922AC96CAA002EC78C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C91DD4972AC973CA002EC78C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C91DD4A32AC976E9002EC78C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		C91DD4A52AC9778A002EC78C /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poke-poke-dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91DD49D2AC97494002EC78C /* RxRelay in Frameworks */,
+				C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */,
+				C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */,
 				C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +100,46 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		C91DD4962AC973B1002EC78C /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				C91DD4972AC973CA002EC78C /* ListViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		C91DD4992AC97483002EC78C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C91DD4A02AC976B2002EC78C /* api */ = {
+			isa = PBXGroup;
+			children = (
+				C91DD4A12AC976B8002EC78C /* entity */,
+				C91DD4A22AC976C6002EC78C /* repository */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		C91DD4A12AC976B8002EC78C /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				C91DD4A32AC976E9002EC78C /* ListModel.swift */,
+				C91DD4A52AC9778A002EC78C /* DetailModel.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		C91DD4A22AC976C6002EC78C /* repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		C9243FC22AC88C74003EE2FC = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +147,7 @@
 				C9243FE42AC88C75003EE2FC /* poke-poke-dexTests */,
 				C9243FEE2AC88C75003EE2FC /* poke-poke-dexUITests */,
 				C9243FCC2AC88C74003EE2FC /* Products */,
+				C91DD4992AC97483002EC78C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,9 +207,11 @@
 		C92440002AC88CAF003EE2FC /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C91DD4A02AC976B2002EC78C /* api */,
 				C9243FFE2AC88C9D003EE2FC /* controller */,
 				C9243FFF2AC88CA7003EE2FC /* storyboard */,
 				C91DD4852AC90FA4002EC78C /* ui */,
+				C91DD4962AC973B1002EC78C /* viewmodel */,
 				C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */,
 				C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */,
 			);
@@ -190,6 +245,9 @@
 			name = "poke-poke-dex";
 			packageProductDependencies = (
 				C91DD4892AC937D0002EC78C /* Alamofire */,
+				C91DD49A2AC9748F002EC78C /* RxSwift */,
+				C91DD49C2AC97494002EC78C /* RxRelay */,
+				C91DD49E2AC97497002EC78C /* RxCocoa */,
 			);
 			productName = "poke-poke-dex";
 			productReference = C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */;
@@ -310,8 +368,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */,
 				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
+				C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */,
 				C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */,
+				C91DD4A42AC976E9002EC78C /* ListModel.swift in Sources */,
 				C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */,
 				C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */,
 			);
@@ -667,6 +728,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C91DD49A2AC9748F002EC78C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		C91DD49C2AC97494002EC78C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		C91DD49E2AC97497002EC78C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
