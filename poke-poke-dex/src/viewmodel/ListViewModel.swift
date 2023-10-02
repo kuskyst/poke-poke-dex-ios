@@ -5,10 +5,10 @@
 //  Created by kohsaka on 2022/10/01.
 //
 
-import Foundation
 import RxRelay
 import RxSwift
-import RxCocoa
+import Moya
+import RxMoya
 
 class ListViewModel {
 
@@ -17,14 +17,17 @@ class ListViewModel {
     let pokemons = BehaviorRelay<[ListResponse.Results]>(value: [])
 
     func requestPokeList() {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon") else { return }
-        let urlRequest = URLRequest(url: url)
-        URLSession.shared.rx.response(request: urlRequest)
-            .subscribe { [weak self] response, data in
-                guard let pokemons = try? JSONDecoder().decode(ListResponse.self, from: data) else { return }
-                self?.pokemons.accept(pokemons.results)
-            } onError: { error in
-                print(error.localizedDescription)
-            }.disposed(by: self.disposeBag)
+        let provider = MoyaProvider<PokeApi>()
+        provider.rx.request(.list)
+            .filterSuccessfulStatusCodes()
+            .map(ListResponse.self)
+            .subscribe(
+                onSuccess: { pokemons in
+                    self.pokemons.accept(pokemons.results)
+                },
+                onFailure: { error in
+                    print(error)
+                }
+            ).disposed(by: disposeBag)
     }
 }

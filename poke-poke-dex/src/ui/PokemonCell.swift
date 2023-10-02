@@ -6,17 +6,18 @@
 //
 
 import UIKit
+import RxSwift
 
 class PokemonCell: UITableViewCell {
 
     static var identifier = "PokemonCell"
-    // ID
-    internal var id: Int!
-    // 名称
     @IBOutlet weak var name: UILabel!
-    // イメージ
+    @IBOutlet weak var type: UILabel!
     @IBOutlet weak var img: UIImageView!
-    
+
+    private let detailViewModel = DetailViewModel()
+    private let disposeBag = DisposeBag()
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -26,7 +27,9 @@ class PokemonCell: UITableViewCell {
     }
 
     func configureCell(model: ListResponse.Results, row: Int) {
-        name.text = model.name
+        name.text = "\(model.url.lastPathComponent).\(model.name)"
+        detailViewModel.requestPokeDetail(id: Int(model.url.lastPathComponent)!)
+        //detailViewModel.pokemon.bind(to: type.rx.text).disposed(by: disposeBag)
     }
 
 }

@@ -7,18 +7,19 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
 
-    private let viewModel = ListViewModel()
-    private var disposeBag = DisposeBag()
+    private let listViewModel = ListViewModel()
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.pokemons
+        listViewModel.pokemons
             .bind(to: tableView.rx.items(
                 cellIdentifier: PokemonCell.identifier,
                 cellType: PokemonCell.self)) { row, element, cell in
@@ -29,7 +30,7 @@ class ListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.requestPokeList()
+        listViewModel.requestPokeList()
     }
 
 }

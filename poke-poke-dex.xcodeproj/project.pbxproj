@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4862AC90FB1002EC78C /* PokemonCell.swift */; };
-		C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4892AC937D0002EC78C /* Alamofire */; };
-		C91DD4942AC96CAA002EC78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4922AC96CAA002EC78C /* Main.storyboard */; };
+		C91DD4942AC96CAA002EC78C /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4922AC96CAA002EC78C /* List.storyboard */; };
 		C91DD4952AC96CAA002EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */; };
 		C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4972AC973CA002EC78C /* ListViewModel.swift */; };
 		C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD49A2AC9748F002EC78C /* RxSwift */; };
@@ -17,6 +16,11 @@
 		C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD49E2AC97497002EC78C /* RxCocoa */; };
 		C91DD4A42AC976E9002EC78C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4A32AC976E9002EC78C /* ListModel.swift */; };
 		C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4A52AC9778A002EC78C /* DetailModel.swift */; };
+		C91DD4A92ACA8585002EC78C /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4A82ACA8585002EC78C /* Moya */; };
+		C91DD4AB2ACA85A9002EC78C /* PokeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */; };
+		C91DD4AD2ACA8854002EC78C /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4AC2ACA8854002EC78C /* RxMoya */; };
+		C91DD4AF2ACA8D6E002EC78C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */; };
+		C91DD4B22ACA9AFC002EC78C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4B12ACA9AFC002EC78C /* UIImage.swift */; };
 		C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */; };
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
 		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
@@ -45,11 +49,14 @@
 
 /* Begin PBXFileReference section */
 		C91DD4862AC90FB1002EC78C /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
-		C91DD4922AC96CAA002EC78C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C91DD4922AC96CAA002EC78C /* List.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91DD4972AC973CA002EC78C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C91DD4A32AC976E9002EC78C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		C91DD4A52AC9778A002EC78C /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApi.swift; sourceTree = "<group>"; };
+		C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C91DD4B12ACA9AFC002EC78C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poke-poke-dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,10 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91DD4AD2ACA8854002EC78C /* RxMoya in Frameworks */,
 				C91DD49D2AC97494002EC78C /* RxRelay in Frameworks */,
 				C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */,
 				C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */,
-				C91DD48A2AC937D0002EC78C /* Alamofire in Frameworks */,
+				C91DD4A92ACA8585002EC78C /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DD4972AC973CA002EC78C /* ListViewModel.swift */,
+				C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -119,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DD4A12AC976B8002EC78C /* entity */,
-				C91DD4A22AC976C6002EC78C /* repository */,
+				C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -133,11 +142,12 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
-		C91DD4A22AC976C6002EC78C /* repository */ = {
+		C91DD4B02ACA9AE7002EC78C /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				C91DD4B12ACA9AFC002EC78C /* UIImage.swift */,
 			);
-			path = repository;
+			path = extension;
 			sourceTree = "<group>";
 		};
 		C9243FC22AC88C74003EE2FC = {
@@ -199,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */,
-				C91DD4922AC96CAA002EC78C /* Main.storyboard */,
+				C91DD4922AC96CAA002EC78C /* List.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -209,6 +219,7 @@
 			children = (
 				C91DD4A02AC976B2002EC78C /* api */,
 				C9243FFE2AC88C9D003EE2FC /* controller */,
+				C91DD4B02ACA9AE7002EC78C /* extension */,
 				C9243FFF2AC88CA7003EE2FC /* storyboard */,
 				C91DD4852AC90FA4002EC78C /* ui */,
 				C91DD4962AC973B1002EC78C /* viewmodel */,
@@ -244,10 +255,11 @@
 			);
 			name = "poke-poke-dex";
 			packageProductDependencies = (
-				C91DD4892AC937D0002EC78C /* Alamofire */,
 				C91DD49A2AC9748F002EC78C /* RxSwift */,
 				C91DD49C2AC97494002EC78C /* RxRelay */,
 				C91DD49E2AC97497002EC78C /* RxCocoa */,
+				C91DD4A82ACA8585002EC78C /* Moya */,
+				C91DD4AC2ACA8854002EC78C /* RxMoya */,
 			);
 			productName = "poke-poke-dex";
 			productReference = C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */;
@@ -324,6 +336,7 @@
 			packageReferences = (
 				C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = C9243FCC2AC88C74003EE2FC /* Products */;
 			projectDirPath = "";
@@ -343,7 +356,7 @@
 			files = (
 				C91DD4952AC96CAA002EC78C /* LaunchScreen.storyboard in Resources */,
 				C9243FD82AC88C75003EE2FC /* Assets.xcassets in Resources */,
-				C91DD4942AC96CAA002EC78C /* Main.storyboard in Resources */,
+				C91DD4942AC96CAA002EC78C /* List.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +382,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */,
+				C91DD4B22ACA9AFC002EC78C /* UIImage.swift in Sources */,
 				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
 				C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */,
 				C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */,
+				C91DD4AF2ACA8D6E002EC78C /* DetailViewModel.swift in Sources */,
 				C91DD4A42AC976E9002EC78C /* ListModel.swift in Sources */,
 				C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */,
+				C91DD4AB2ACA85A9002EC78C /* PokeApi.swift in Sources */,
 				C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,7 +553,7 @@
 				INFOPLIST_FILE = "poke-poke-dex/resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = List;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -568,7 +584,7 @@
 				INFOPLIST_FILE = "poke-poke-dex/resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = List;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -721,14 +737,17 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C91DD4892AC937D0002EC78C /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		C91DD49A2AC9748F002EC78C /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -743,6 +762,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		C91DD4A82ACA8585002EC78C /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		C91DD4AC2ACA8854002EC78C /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
