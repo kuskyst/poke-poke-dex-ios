@@ -13,8 +13,7 @@ class DetailViewModel {
 
     private var disposeBag = DisposeBag()
 
-    let pokemon = BehaviorRelay<DetailResponse?>(value: nil)
-    let stg = BehaviorRelay<String>(value: "")
+    let pokemon = PublishRelay<DetailResponse>()
 
     func requestPokeDetail(id: Int) {
         let provider = MoyaProvider<PokeApi>()

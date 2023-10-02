@@ -11,11 +11,11 @@ import Moya
 import RxMoya
 
 class ListViewModel {
-
+    
     private var disposeBag = DisposeBag()
-
-    let pokemons = BehaviorRelay<[ListResponse.Results]>(value: [])
-
+    
+    let pokemons = PublishRelay<[ListResponse.Results]>()
+    
     func requestPokeList() {
         let provider = MoyaProvider<PokeApi>()
         provider.rx.request(.list)
@@ -30,4 +30,5 @@ class ListViewModel {
                 }
             ).disposed(by: disposeBag)
     }
+
 }

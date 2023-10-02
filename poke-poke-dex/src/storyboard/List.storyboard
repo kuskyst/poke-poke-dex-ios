@@ -47,7 +47,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-QX-Aay">
-                                <rect key="frame" x="0.0" y="112" width="393" height="706"/>
+                                <rect key="frame" x="0.0" y="112" width="393" height="740"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PokemonCell" rowHeight="130" id="SJq-GG-4Gt" customClass="PokemonCell" customModule="poke_poke_dex" customModuleProvider="target">
@@ -57,31 +57,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25. Pikachu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-c7-biz">
-                                                    <rect key="frame" x="267.66666666666669" y="53" width="109.33333333333331" height="24"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="ZST-zE-o36">
-                                                    <rect key="frame" x="16" y="35" width="60" height="60"/>
+                                                    <rect key="frame" x="301" y="35" width="60" height="60"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="1Ej-KX-53z"/>
                                                         <constraint firstAttribute="height" constant="60" id="sXk-fo-14t"/>
                                                     </constraints>
                                                 </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-fN-9pX">
+                                                    <rect key="frame" x="32" y="50.666666666666664" width="48" height="28.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. 25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-c7-biz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="48" height="14.333333333333334"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pikachu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-x3-rrJ">
+                                                            <rect key="frame" x="0.0" y="14.333333333333336" width="48" height="14.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ZST-zE-o36" firstAttribute="centerY" secondItem="Kny-HW-7Pz" secondAttribute="centerY" id="DRE-IZ-b7R"/>
-                                                <constraint firstItem="ZST-zE-o36" firstAttribute="leading" secondItem="Kny-HW-7Pz" secondAttribute="leading" constant="16" id="QAj-r0-mCK"/>
-                                                <constraint firstItem="H7B-c7-biz" firstAttribute="trailing" secondItem="Kny-HW-7Pz" secondAttribute="trailing" constant="-16" id="hdJ-BW-twv"/>
-                                                <constraint firstItem="H7B-c7-biz" firstAttribute="centerY" secondItem="Kny-HW-7Pz" secondAttribute="centerY" id="mxc-bL-Axo"/>
+                                                <constraint firstItem="ZST-zE-o36" firstAttribute="trailing" secondItem="Kny-HW-7Pz" secondAttribute="trailing" constant="-32" id="QAj-r0-mCK"/>
+                                                <constraint firstItem="hKo-fN-9pX" firstAttribute="centerY" secondItem="Kny-HW-7Pz" secondAttribute="centerY" id="XNf-VO-oaJ"/>
+                                                <constraint firstItem="hKo-fN-9pX" firstAttribute="leading" secondItem="Kny-HW-7Pz" secondAttribute="leading" constant="32" id="ZwT-97-9Hf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="id" destination="H7B-c7-biz" id="y7C-Hg-iaJ"/>
                                             <outlet property="img" destination="ZST-zE-o36" id="oFg-by-lg6"/>
-                                            <outlet property="name" destination="H7B-c7-biz" id="PPH-ka-L6I"/>
+                                            <outlet property="name" destination="6sU-x3-rrJ" id="s6f-H7-lFC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,7 +107,7 @@
                             <constraint firstItem="CTE-QX-Aay" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="EA2-o2-itj"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="leading" secondItem="efN-hy-FVn" secondAttribute="leading" id="J28-Tk-FBo"/>
                             <constraint firstItem="eOH-NH-xVH" firstAttribute="top" secondItem="OpM-YO-OZA" secondAttribute="bottom" id="MmF-tV-btN"/>
-                            <constraint firstItem="CTE-QX-Aay" firstAttribute="bottom" secondItem="efN-hy-FVn" secondAttribute="bottom" id="Ud5-Gf-41P"/>
+                            <constraint firstItem="CTE-QX-Aay" firstAttribute="bottom" secondItem="f9X-9t-UJZ" secondAttribute="bottom" id="Ud5-Gf-41P"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="bottom" secondItem="eOH-NH-xVH" secondAttribute="top" id="YLo-xF-lA8"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="ZAH-Cl-88S"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="top" secondItem="f9X-9t-UJZ" secondAttribute="top" id="eQS-nP-5Hj"/>

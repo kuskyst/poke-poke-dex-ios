@@ -11,8 +11,8 @@ import RxSwift
 class PokemonCell: UITableViewCell {
 
     static var identifier = "PokemonCell"
+    @IBOutlet weak var id: UILabel!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var type: UILabel!
     @IBOutlet weak var img: UIImageView!
 
     private let detailViewModel = DetailViewModel()
@@ -27,9 +27,10 @@ class PokemonCell: UITableViewCell {
     }
 
     func configureCell(model: ListResponse.Results, row: Int) {
-        name.text = "\(model.url.lastPathComponent).\(model.name)"
-        detailViewModel.requestPokeDetail(id: Int(model.url.lastPathComponent)!)
-        //detailViewModel.pokemon.bind(to: type.rx.text).disposed(by: disposeBag)
+        let id = model.url.lastPathComponent
+        self.id.text = "No.\(id)"
+        self.name.text = model.name
+        self.img.image = UIImage(url: "https://raw.githubusercontent.com/POKEAPI/sprites/master/sprites/pokemon/\(id).png")
     }
 
 }

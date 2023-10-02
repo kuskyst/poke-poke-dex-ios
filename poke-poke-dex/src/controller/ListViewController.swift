@@ -19,6 +19,8 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.rowHeight = 60
+
         listViewModel.pokemons
             .bind(to: tableView.rx.items(
                 cellIdentifier: PokemonCell.identifier,
