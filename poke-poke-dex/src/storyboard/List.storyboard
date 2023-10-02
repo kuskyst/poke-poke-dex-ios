@@ -19,7 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpM-YO-OZA" userLabel="safe">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.33333333329999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97254902119999997" green="0.82352948189999997" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="gsJ-hn-rh2"/>
                                 </constraints>
@@ -39,7 +39,7 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.33333333329999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99215686319999996" green="0.82352948189999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Cr8-VR-Lmh"/>
                                     <constraint firstItem="Lzl-9l-nhq" firstAttribute="centerY" secondItem="eOH-NH-xVH" secondAttribute="centerY" id="dbs-mq-UHf"/>
