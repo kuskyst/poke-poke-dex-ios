@@ -17,19 +17,25 @@ class ListViewController: UIViewController {
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
+    private var selected = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.showAnimatedSkeleton()
         self.viewModel.pokemons
             .bind(to: pokemonTable.rx.items(
                 cellIdentifier: PokemonCell.identifier,
                 cellType: PokemonCell.self)) { row, element, cell in
-                    cell.configureCell(model: element)
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
                         self.view.hideSkeleton()
+                        cell.configureCell(model: element)
                     }
                 }
+            .disposed(by: disposeBag)
+        self.pokemonTable.rx.modelSelected(ListResponse.Results.self)
+            .subscribe(onNext: { [weak self] model in
+                self!.selected = Int(model.url.lastPathComponent)!
+                self?.performSegue(withIdentifier: "toDetail", sender: nil)
+            })
             .disposed(by: disposeBag)
 
         Observable.just(AppConstant.verList)
@@ -52,7 +58,12 @@ class ListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.showAnimatedSkeleton()
         self.viewModel.fetchPokeList(param: ListRequest(limit: 20, offset: 0))
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let next = segue.destination as? DetailViewController
+        next?.id = self.selected
+    }
 }

@@ -27,24 +27,9 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOH-NH-xVH" userLabel="header">
                                 <rect key="frame" x="0.0" y="56" width="393" height="56"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzl-9l-nhq" userLabel="plus">
-                                        <rect key="frame" x="335" y="11" width="34" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="Jwm-wu-B3r"/>
-                                            <constraint firstAttribute="width" constant="34" id="csc-rQ-OUf"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" title=" ">
-                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.99215686319999996" green="0.82352948189999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Cr8-VR-Lmh"/>
-                                    <constraint firstItem="Lzl-9l-nhq" firstAttribute="centerY" secondItem="eOH-NH-xVH" secondAttribute="centerY" id="dbs-mq-UHf"/>
-                                    <constraint firstItem="Lzl-9l-nhq" firstAttribute="trailing" secondItem="eOH-NH-xVH" secondAttribute="trailing" constant="-24" id="dr3-uB-Yjo"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-EY-RSO">
@@ -110,10 +95,10 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-fN-9pX">
-                                                    <rect key="frame" x="32" y="50.666666666666664" width="48" height="28.666666666666664"/>
+                                                    <rect key="frame" x="32" y="50.666666666666664" width="29.666666666666671" height="28.666666666666664"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. 25" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-c7-biz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="48" height="14.333333333333334"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-c7-biz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29.666666666666668" height="14.333333333333334"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -121,8 +106,8 @@
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pikachu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-x3-rrJ">
-                                                            <rect key="frame" x="0.0" y="14.333333333333336" width="48" height="14.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-x3-rrJ">
+                                                            <rect key="frame" x="0.0" y="14.333333333333336" width="29.666666666666668" height="14.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -190,16 +175,24 @@
                     <connections>
                         <outlet property="pokemonTable" destination="CTE-QX-Aay" id="T7P-0m-Yld"/>
                         <outlet property="verCarousel" destination="cA2-EY-RSO" id="aqN-aW-h6t"/>
+                        <segue destination="QFe-Hw-8E9" kind="showDetail" identifier="toDetail" id="txC-Wd-ggM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lz0-ce-XnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110.68702290076335" y="450"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="Fga-ko-bfc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="QFe-Hw-8E9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Edg-FC-W7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="450"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
-        <image name="plus.circle" catalog="system" width="128" height="123"/>
         <image name="tie" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
