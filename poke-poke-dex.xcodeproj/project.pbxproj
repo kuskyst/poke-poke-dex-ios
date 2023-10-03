@@ -30,6 +30,7 @@
 		C9243FE62AC88C75003EE2FC /* poke_poke_dexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FE52AC88C75003EE2FC /* poke_poke_dexTests.swift */; };
 		C9243FF02AC88C75003EE2FC /* poke_poke_dexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */; };
 		C9243FF22AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */; };
+		C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA8B952ACC23D90092E924 /* AppConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		C9243FEB2AC88C75003EE2FC /* poke-poke-dexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poke-poke-dexUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexUITests.swift; sourceTree = "<group>"; };
 		C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9BA8B952ACC23D90092E924 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			children = (
 				C91DD4A02AC976B2002EC78C /* api */,
 				C9243FFE2AC88C9D003EE2FC /* controller */,
+				C9BA8B942ACC23C70092E924 /* constant */,
 				C9243FFF2AC88CA7003EE2FC /* storyboard */,
 				C91DD4852AC90FA4002EC78C /* ui */,
 				C91DD4962AC973B1002EC78C /* viewmodel */,
@@ -241,6 +244,14 @@
 				C9243FDC2AC88C75003EE2FC /* Info.plist */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		C9BA8B942ACC23C70092E924 /* constant */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA8B952ACC23D90092E924 /* AppConstant.swift */,
+			);
+			path = constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */,
 				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
 				C91DD4B92ACB8A50002EC78C /* ImageApi.swift in Sources */,
+				C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */,
 				C91DD4C22ACBE56E002EC78C /* VerCell.swift in Sources */,
 				C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */,
 				C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */,
