@@ -12,7 +12,7 @@ import UIKit
 
 class DetailViewModel {
 
-    private var disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     let pokemon = PublishRelay<DetailResponse>()
     let fr_def_img = PublishRelay<UIImage>()

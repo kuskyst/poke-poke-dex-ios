@@ -10,7 +10,7 @@ import RxSwift
 
 class PokemonCell: UITableViewCell {
 
-    static var identifier = "PokemonCell"
+    static let identifier = "PokemonCell"
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var img: UIImageView!

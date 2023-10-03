@@ -12,7 +12,7 @@ import RxMoya
 
 class ListViewModel {
 
-    private var disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     let pokemons = PublishRelay<[ListResponse.Results]>()
 
