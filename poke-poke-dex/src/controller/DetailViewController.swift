@@ -23,13 +23,13 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.pokemon.subscribe(onNext: { _ in
+            self.view.hideSkeleton()
+        }).disposed(by: disposeBag)
         self.viewModel.name.bind(to: name.rx.text).disposed(by: disposeBag)
         self.viewModel.fr_def_img.bind(to: img.rx.image).disposed(by: disposeBag)
         self.viewModel.fr_shi_img.bind(to: shinyImg.rx.image).disposed(by: disposeBag)
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            self.view.hideSkeleton()
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

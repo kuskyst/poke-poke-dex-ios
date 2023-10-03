@@ -28,8 +28,8 @@ class DetailViewModel {
             .map(DetailResponse.self)
             .subscribe(
                 onSuccess: { pokemon in
-                    self.name.accept("No.\(pokemon.id) \(pokemon.name)")
                     self.pokemon.accept(pokemon)
+                    self.name.accept("No.\(pokemon.id) \(pokemon.name)")
                 },
                 onFailure: { error in
                     print(error)
