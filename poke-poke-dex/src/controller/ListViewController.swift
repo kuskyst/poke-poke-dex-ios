@@ -16,6 +16,7 @@ class ListViewController: UIViewController {
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
+    private var param = ListRequest(limit: 20, offset: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class ListViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.viewModel.fetchPokeList()
+        self.viewModel.fetchPokeList(param: param)
     }
 
 }

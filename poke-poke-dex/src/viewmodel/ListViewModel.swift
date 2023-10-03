@@ -16,9 +16,9 @@ class ListViewModel {
 
     let pokemons = PublishRelay<[ListResponse.Results]>()
 
-    func fetchPokeList() {
+    func fetchPokeList(param: ListRequest) {
         let provider = MoyaProvider<PokeApi>()
-        provider.rx.request(.list)
+        provider.rx.request(.list(param.limit, param.offset))
             .filterSuccessfulStatusCodes()
             .map(ListResponse.self)
             .subscribe(

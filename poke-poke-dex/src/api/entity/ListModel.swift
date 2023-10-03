@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListRequest: Codable {
+struct ListRequest: Decodable {
     let limit: Int
     let offset: Int
 }
