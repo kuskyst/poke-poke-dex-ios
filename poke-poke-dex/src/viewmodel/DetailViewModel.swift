@@ -8,14 +8,16 @@
 import RxSwift
 import RxRelay
 import Moya
+import UIKit
 
 class DetailViewModel {
 
     private var disposeBag = DisposeBag()
 
     let pokemon = PublishRelay<DetailResponse>()
+    let fr_def_img = PublishRelay<UIImage>()
 
-    func requestPokeDetail(id: Int) {
+    func fetchPokeDetail(id: Int) {
         let provider = MoyaProvider<PokeApi>()
         provider.rx.request(.detail(id))
             .filterSuccessfulStatusCodes()
@@ -29,4 +31,19 @@ class DetailViewModel {
                 }
             ).disposed(by: disposeBag)
     }
+
+    func fetchFrontDefaultImage(id: Int) {
+        let provider = MoyaProvider<ImageApi>()
+        provider.rx.request(.front_default(id))
+            .mapImage()
+            .subscribe(
+                onSuccess: { image in
+                    self.fr_def_img.accept(image)
+                },
+                onFailure: { error in
+                    print(error)
+                }
+            ).disposed(by: disposeBag)
+    }
+
 }

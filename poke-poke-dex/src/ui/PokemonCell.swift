@@ -16,7 +16,7 @@ class PokemonCell: UITableViewCell {
     @IBOutlet weak var img: UIImageView!
 
     
-    private let listViewModel = ListViewModel()
+    private let viewModel = DetailViewModel()
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -30,8 +30,8 @@ class PokemonCell: UITableViewCell {
     func configureCell(model: ListResponse.Results) {
         self.id.text = "No.\(model.url.lastPathComponent)"
         self.name.text = model.name
-        self.listViewModel.fetchImage(id: Int(model.url.lastPathComponent) ?? 0)
-        self.listViewModel.image.bind(to: img.rx.image).disposed(by: self.disposeBag)
+        self.viewModel.fetchFrontDefaultImage(id: Int(model.url.lastPathComponent) ?? 0)
+        self.viewModel.fr_def_img.bind(to: img.rx.image).disposed(by: self.disposeBag)
     }
 
 }
