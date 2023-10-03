@@ -15,6 +15,7 @@ class DetailViewModel {
     private let disposeBag = DisposeBag()
 
     let pokemon = PublishRelay<DetailResponse>()
+    let name = PublishRelay<String>()
     let fr_def_img = PublishRelay<UIImage>()
 
     func fetchPokeDetail(id: Int) {
@@ -25,6 +26,7 @@ class DetailViewModel {
             .subscribe(
                 onSuccess: { pokemon in
                     self.pokemon.accept(pokemon)
+                    self.name.accept("No.\(pokemon.id) \(pokemon.name)")
                 },
                 onFailure: { error in
                     print(error)
