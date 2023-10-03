@@ -31,9 +31,10 @@
                                     <action selector="dismiss" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZGt-4V-3q1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No.- - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-xs-2dB">
-                                <rect key="frame" x="167" y="71" width="59" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No.- - " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-xs-2dB">
+                                <rect key="frame" x="136.66666666666666" y="71" width="119.99999999999997" height="34"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ACa-Qj-lYQ"/>
                                     <constraint firstAttribute="height" constant="34" id="sSy-S6-4PO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -75,11 +76,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pd7-87-ctA" firstAttribute="bottom" secondItem="gOV-xs-2dB" secondAttribute="bottom" id="2zo-1g-6Oh"/>
                             <constraint firstItem="jQQ-Kw-VVW" firstAttribute="top" secondItem="gOV-xs-2dB" secondAttribute="bottom" constant="4" id="ehv-S6-vgu"/>
                             <constraint firstItem="gOV-xs-2dB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fpk-o2-ZIN"/>
                             <constraint firstItem="jQQ-Kw-VVW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kf2-3a-UiA"/>
-                            <constraint firstItem="pd7-87-ctA" firstAttribute="top" secondItem="gOV-xs-2dB" secondAttribute="top" id="qUN-R2-hle"/>
+                            <constraint firstItem="pd7-87-ctA" firstAttribute="centerY" secondItem="gOV-xs-2dB" secondAttribute="centerY" id="qUN-R2-hle"/>
                             <constraint firstItem="gOV-xs-2dB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="rcI-Po-2sn"/>
                             <constraint firstItem="pd7-87-ctA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="vNm-Su-sC2"/>
                         </constraints>
