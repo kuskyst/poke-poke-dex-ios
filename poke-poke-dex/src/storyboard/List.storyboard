@@ -67,27 +67,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nal-hL-Y84">
-                                                    <rect key="frame" x="4" y="48.666666666666657" width="120" height="31"/>
-                                                    <color key="tintColor" red="0.99215686319999996" green="0.82352948189999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
-                                                        <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
-                                                        <color key="baseForegroundColor" systemColor="systemGray2Color"/>
-                                                    </buttonConfiguration>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFl-bb-nmp">
+                                                    <rect key="frame" x="20" y="54.333333333333336" width="88" height="19.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nal-hL-Y84" firstAttribute="trailing" secondItem="SBm-ya-Xga" secondAttribute="trailing" constant="-4" id="5fZ-lh-9wi"/>
-                                                <constraint firstItem="nal-hL-Y84" firstAttribute="centerY" secondItem="SBm-ya-Xga" secondAttribute="centerY" id="cB0-TT-nDZ"/>
-                                                <constraint firstItem="nal-hL-Y84" firstAttribute="leading" secondItem="SBm-ya-Xga" secondAttribute="leading" constant="4" id="yoD-Tx-CI0"/>
+                                                <constraint firstItem="QFl-bb-nmp" firstAttribute="trailing" secondItem="SBm-ya-Xga" secondAttribute="trailing" constant="-20" id="Def-JM-zxK"/>
+                                                <constraint firstItem="QFl-bb-nmp" firstAttribute="centerY" secondItem="SBm-ya-Xga" secondAttribute="centerY" id="Kci-Gq-gQ9"/>
+                                                <constraint firstItem="QFl-bb-nmp" firstAttribute="leading" secondItem="SBm-ya-Xga" secondAttribute="leading" constant="20" id="U0z-zy-XWH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="name" destination="nal-hL-Y84" id="gfd-S3-HUE"/>
+                                            <outlet property="name" destination="QFl-bb-nmp" id="RTv-km-Rkw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="epX-ep-7cB" id="5Z7-hf-vi6"/>
+                                    <outlet property="delegate" destination="epX-ep-7cB" id="xL8-dB-TfW"/>
+                                </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-QX-Aay">
                                 <rect key="frame" x="0.0" y="172" width="393" height="680"/>
@@ -160,6 +161,9 @@
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
@@ -202,9 +206,6 @@
         <image name="tie" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

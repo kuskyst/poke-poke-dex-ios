@@ -19,15 +19,11 @@ class ListViewController: UIViewController {
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
-    private var param = ListRequest()
+    private var param = ListRequest(limit: 20, offset: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.pokemonTable.rowHeight = UITableView.automaticDimension
         self.view.showSkeleton()
-
-        self.verCarousel.dataSource = self
         self.viewModel.pokemons
             .bind(to: pokemonTable.rx.items(
                 cellIdentifier: PokemonCell.identifier,
@@ -45,16 +41,18 @@ class ListViewController: UIViewController {
 
 }
 
-extension ListViewController: UICollectionViewDataSource {
-
+extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         verList.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerCell.identifier, for: indexPath)
-        (cell as! VerCell).name.setTitle(verList[indexPath.row], for: .normal)
+        (cell as! VerCell).name.text = verList[indexPath.row]
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
 }

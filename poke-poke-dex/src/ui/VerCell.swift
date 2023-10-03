@@ -9,7 +9,7 @@ import UIKit
 
 class VerCell: UICollectionViewCell {
 
-    @IBOutlet weak var name: UIButton!
+    @IBOutlet weak var name: UILabel!
 
     static let identifier: String = "VerCell"
 
