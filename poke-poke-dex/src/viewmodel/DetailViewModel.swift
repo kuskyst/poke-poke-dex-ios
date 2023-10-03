@@ -17,6 +17,9 @@ class DetailViewModel {
     let pokemon = PublishRelay<DetailResponse>()
     let name = PublishRelay<String>()
     let fr_def_img = PublishRelay<UIImage>()
+    let fr_shi_img = PublishRelay<UIImage>()
+    let bk_def_img = PublishRelay<UIImage>()
+    let bk_shi_img = PublishRelay<UIImage>()
 
     func fetchPokeDetail(id: Int) {
         let provider = MoyaProvider<PokeApi>()
@@ -25,8 +28,8 @@ class DetailViewModel {
             .map(DetailResponse.self)
             .subscribe(
                 onSuccess: { pokemon in
-                    self.pokemon.accept(pokemon)
                     self.name.accept("No.\(pokemon.id) \(pokemon.name)")
+                    self.pokemon.accept(pokemon)
                 },
                 onFailure: { error in
                     print(error)
@@ -34,13 +37,18 @@ class DetailViewModel {
             ).disposed(by: disposeBag)
     }
 
-    func fetchFrontDefaultImage(id: Int) {
+    func fetchImage(type: ImageApi) {
         let provider = MoyaProvider<ImageApi>()
-        provider.rx.request(.front_default(id))
+        provider.rx.request(type)
             .mapImage()
             .subscribe(
                 onSuccess: { image in
-                    self.fr_def_img.accept(image)
+                    switch type {
+                        case .back_default(_): return self.bk_def_img.accept(image)
+                        case .front_default(_): return self.fr_def_img.accept(image)
+                        case .front_shiny(_): return self.fr_shi_img.accept(image)
+                        case .back_shiny(_): return self.bk_shi_img.accept(image)
+                    }
                 },
                 onFailure: { error in
                     print(error)

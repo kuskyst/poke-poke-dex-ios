@@ -35,8 +35,7 @@ class ListViewController: UIViewController {
             .subscribe(onNext: { [weak self] model in
                 self?.selected = Int(model.url.lastPathComponent)!
                 self?.performSegue(withIdentifier: "toDetail", sender: nil)
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
 
         Observable.just(AppConstant.verList)
             .bind(to: verCarousel.rx.items(
@@ -48,9 +47,7 @@ class ListViewController: UIViewController {
         self.verCarousel.rx.itemSelected
             .subscribe(onNext: { [unowned self] indexPath in
                 self.verCarousel.scrollToItem(
-                    at: indexPath,
-                    at: .centeredHorizontally,
-                    animated: true)
+                    at: indexPath, at: .centeredHorizontally, animated: true)
                 self.view.showAnimatedSkeleton()
                 self.viewModel.fetchPokeList(param: AppConstant.paramList[indexPath.row])
             }).disposed(by: disposeBag)

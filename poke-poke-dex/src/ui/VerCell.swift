@@ -12,8 +12,4 @@ class VerCell: UICollectionViewCell {
     static let identifier: String = "VerCell"
     @IBOutlet weak var ver: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
 }

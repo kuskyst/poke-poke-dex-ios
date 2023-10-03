@@ -84,18 +84,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="ZST-zE-o36">
-                                                    <rect key="frame" x="301" y="35" width="60" height="60"/>
+                                                    <rect key="frame" x="281" y="37" width="56" height="56"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="1Ej-KX-53z"/>
-                                                        <constraint firstAttribute="height" constant="60" id="sXk-fo-14t"/>
+                                                        <constraint firstAttribute="width" constant="56" id="1Ej-KX-53z"/>
+                                                        <constraint firstAttribute="height" constant="56" id="sXk-fo-14t"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-fN-9pX">
-                                                    <rect key="frame" x="32" y="50.666666666666664" width="29.666666666666671" height="28.666666666666664"/>
+                                                    <rect key="frame" x="55.999999999999993" y="50.666666666666664" width="29.666666666666664" height="28.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-c7-biz">
                                                             <rect key="frame" x="0.0" y="0.0" width="29.666666666666668" height="14.333333333333334"/>
@@ -123,9 +123,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ZST-zE-o36" firstAttribute="centerY" secondItem="Kny-HW-7Pz" secondAttribute="centerY" id="DRE-IZ-b7R"/>
-                                                <constraint firstItem="ZST-zE-o36" firstAttribute="trailing" secondItem="Kny-HW-7Pz" secondAttribute="trailing" constant="-32" id="QAj-r0-mCK"/>
+                                                <constraint firstItem="ZST-zE-o36" firstAttribute="trailing" secondItem="Kny-HW-7Pz" secondAttribute="trailing" constant="-56" id="QAj-r0-mCK"/>
                                                 <constraint firstItem="hKo-fN-9pX" firstAttribute="centerY" secondItem="Kny-HW-7Pz" secondAttribute="centerY" id="XNf-VO-oaJ"/>
-                                                <constraint firstItem="hKo-fN-9pX" firstAttribute="leading" secondItem="Kny-HW-7Pz" secondAttribute="leading" constant="32" id="ZwT-97-9Hf"/>
+                                                <constraint firstItem="hKo-fN-9pX" firstAttribute="leading" secondItem="Kny-HW-7Pz" secondAttribute="leading" constant="56" id="ZwT-97-9Hf"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>

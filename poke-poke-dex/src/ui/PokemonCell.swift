@@ -21,7 +21,7 @@ class PokemonCell: UITableViewCell {
     func configureCell(model: ListResponse.Results) {
         self.id.text = "No.\(model.url.lastPathComponent)"
         self.name.text = model.name
-        self.viewModel.fetchFrontDefaultImage(id: Int(model.url.lastPathComponent) ?? 0)
+        self.viewModel.fetchImage(type: ImageApi.front_default(Int(model.url.lastPathComponent) ?? 0))
         self.viewModel.fr_def_img.bind(to: img.rx.image).disposed(by: self.disposeBag)
     }
 
