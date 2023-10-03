@@ -20,13 +20,15 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.showSkeleton()
+        self.view.showAnimatedSkeleton()
         self.viewModel.pokemons
             .bind(to: pokemonTable.rx.items(
                 cellIdentifier: PokemonCell.identifier,
                 cellType: PokemonCell.self)) { row, element, cell in
                     cell.configureCell(model: element)
-                    self.view.hideSkeleton()
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+                        self.view.hideSkeleton()
+                    }
                 }
             .disposed(by: disposeBag)
 
@@ -43,6 +45,7 @@ class ListViewController: UIViewController {
                     at: indexPath,
                     at: .centeredHorizontally,
                     animated: true)
+                self.view.showAnimatedSkeleton()
                 self.viewModel.fetchPokeList(param: AppConstant.paramList[indexPath.row])
             }).disposed(by: disposeBag)
     }
