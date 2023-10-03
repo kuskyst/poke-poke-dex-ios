@@ -28,6 +28,7 @@ class ListViewController: UIViewController {
                 cellIdentifier: PokemonCell.identifier,
                 cellType: PokemonCell.self)) { row, element, cell in
                     cell.configureCell(model: element)
+                    self.view.hideSkeleton()
                 }
             .disposed(by: disposeBag)
     }

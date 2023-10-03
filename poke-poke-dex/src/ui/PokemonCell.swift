@@ -15,7 +15,6 @@ class PokemonCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var img: UIImageView!
 
-    
     private let viewModel = DetailViewModel()
     private let disposeBag = DisposeBag()
 
