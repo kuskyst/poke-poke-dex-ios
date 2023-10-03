@@ -15,7 +15,7 @@ struct DetailResponse: Decodable {
     let sprites: Sprites
     struct Sprites: Decodable {
         let front_default: URL
-        let back_default: URL
+        let back_default: URL?
         let front_shiny: URL?
         let back_shiny: URL?
     }
