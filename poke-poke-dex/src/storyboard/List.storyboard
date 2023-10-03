@@ -64,6 +64,9 @@
                                                         <constraint firstAttribute="width" constant="60" id="1Ej-KX-53z"/>
                                                         <constraint firstAttribute="height" constant="60" id="sXk-fo-14t"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-fN-9pX">
                                                     <rect key="frame" x="32" y="50.666666666666664" width="48" height="28.666666666666664"/>
@@ -73,14 +76,23 @@
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pikachu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-x3-rrJ">
                                                             <rect key="frame" x="0.0" y="14.333333333333336" width="48" height="14.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                     </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -89,7 +101,13 @@
                                                 <constraint firstItem="hKo-fN-9pX" firstAttribute="centerY" secondItem="Kny-HW-7Pz" secondAttribute="centerY" id="XNf-VO-oaJ"/>
                                                 <constraint firstItem="hKo-fN-9pX" firstAttribute="leading" secondItem="Kny-HW-7Pz" secondAttribute="leading" constant="32" id="ZwT-97-9Hf"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="id" destination="H7B-c7-biz" id="y7C-Hg-iaJ"/>
                                             <outlet property="img" destination="ZST-zE-o36" id="oFg-by-lg6"/>
@@ -97,6 +115,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="efN-hy-FVn"/>
@@ -114,6 +135,9 @@
                             <constraint firstItem="CTE-QX-Aay" firstAttribute="top" secondItem="eOH-NH-xVH" secondAttribute="bottom" id="jIU-zv-i7j"/>
                             <constraint firstItem="eOH-NH-xVH" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="nLR-rv-hNO"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="リスト" image="list.bullet" catalog="system" id="orc-0k-dGq"/>
                     <connections>

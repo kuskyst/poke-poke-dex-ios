@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SkeletonView
 
 class ListViewController: UIViewController {
 
@@ -19,13 +20,14 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = 60
+        tableView.rowHeight = UITableView.automaticDimension
+        view.showAnimatedSkeleton()
 
         listViewModel.pokemons
             .bind(to: tableView.rx.items(
                 cellIdentifier: PokemonCell.identifier,
                 cellType: PokemonCell.self)) { row, element, cell in
-                    cell.configureCell(model: element, row: row)
+                    cell.configureCell(model: element)
                 }
             .disposed(by: disposeBag)
     }

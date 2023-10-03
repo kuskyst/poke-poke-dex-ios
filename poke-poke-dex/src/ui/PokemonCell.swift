@@ -15,7 +15,8 @@ class PokemonCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var img: UIImageView!
 
-    private let detailViewModel = DetailViewModel()
+    
+    private let listViewModel = ListViewModel()
     private let disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -26,11 +27,11 @@ class PokemonCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func configureCell(model: ListResponse.Results, row: Int) {
-        let id = model.url.lastPathComponent
-        self.id.text = "No.\(id)"
+    func configureCell(model: ListResponse.Results) {
+        self.id.text = "No.\(model.url.lastPathComponent)"
         self.name.text = model.name
-        self.img.image = UIImage(url: "https://raw.githubusercontent.com/POKEAPI/sprites/master/sprites/pokemon/\(id).png")
+        self.listViewModel.fetchImage(id: Int(model.url.lastPathComponent) ?? 0)
+        self.listViewModel.image.bind(to: img.rx.image).disposed(by: self.disposeBag)
     }
 
 }

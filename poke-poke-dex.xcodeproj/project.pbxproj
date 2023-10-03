@@ -21,6 +21,8 @@
 		C91DD4AD2ACA8854002EC78C /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4AC2ACA8854002EC78C /* RxMoya */; };
 		C91DD4AF2ACA8D6E002EC78C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */; };
 		C91DD4B22ACA9AFC002EC78C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4B12ACA9AFC002EC78C /* UIImage.swift */; };
+		C91DD4B62ACAEEE6002EC78C /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4B52ACAEEE6002EC78C /* SkeletonView */; };
+		C91DD4B92ACB8A50002EC78C /* ImageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4B82ACB8A50002EC78C /* ImageApi.swift */; };
 		C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */; };
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
 		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
@@ -57,6 +59,7 @@
 		C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApi.swift; sourceTree = "<group>"; };
 		C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C91DD4B12ACA9AFC002EC78C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C91DD4B82ACB8A50002EC78C /* ImageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApi.swift; sourceTree = "<group>"; };
 		C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poke-poke-dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 				C91DD49D2AC97494002EC78C /* RxRelay in Frameworks */,
 				C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */,
 				C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */,
+				C91DD4B62ACAEEE6002EC78C /* SkeletonView in Frameworks */,
 				C91DD4A92ACA8585002EC78C /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C91DD4A12AC976B8002EC78C /* entity */,
-				C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */,
+				C91DD4B72ACB8A29002EC78C /* repository */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -148,6 +152,15 @@
 				C91DD4B12ACA9AFC002EC78C /* UIImage.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		C91DD4B72ACB8A29002EC78C /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */,
+				C91DD4B82ACB8A50002EC78C /* ImageApi.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 		C9243FC22AC88C74003EE2FC = {
@@ -260,6 +273,7 @@
 				C91DD49E2AC97497002EC78C /* RxCocoa */,
 				C91DD4A82ACA8585002EC78C /* Moya */,
 				C91DD4AC2ACA8854002EC78C /* RxMoya */,
+				C91DD4B52ACAEEE6002EC78C /* SkeletonView */,
 			);
 			productName = "poke-poke-dex";
 			productReference = C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */;
@@ -337,6 +351,7 @@
 				C91DD4882AC937D0002EC78C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */,
 				C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */,
+				C91DD4B42ACAEEE6002EC78C /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = C9243FCC2AC88C74003EE2FC /* Products */;
 			projectDirPath = "";
@@ -384,6 +399,7 @@
 				C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */,
 				C91DD4B22ACA9AFC002EC78C /* UIImage.swift in Sources */,
 				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
+				C91DD4B92ACB8A50002EC78C /* ImageApi.swift in Sources */,
 				C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */,
 				C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */,
 				C91DD4AF2ACA8D6E002EC78C /* DetailViewModel.swift in Sources */,
@@ -745,6 +761,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		C91DD4B42ACAEEE6002EC78C /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.30.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -772,6 +796,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		C91DD4B52ACAEEE6002EC78C /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD4B42ACAEEE6002EC78C /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

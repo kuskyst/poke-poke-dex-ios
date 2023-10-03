@@ -9,13 +9,16 @@ import RxRelay
 import RxSwift
 import Moya
 import RxMoya
+import Foundation
+import UIKit
 
 class ListViewModel {
-    
+
     private var disposeBag = DisposeBag()
-    
+
     let pokemons = PublishRelay<[ListResponse.Results]>()
-    
+    let image = PublishRelay<UIImage>()
+
     func requestPokeList() {
         let provider = MoyaProvider<PokeApi>()
         provider.rx.request(.list)
@@ -30,5 +33,18 @@ class ListViewModel {
                 }
             ).disposed(by: disposeBag)
     }
-
+    
+    func fetchImage(id: Int) {
+        let provider = MoyaProvider<ImageApi>()
+        provider.rx.request(.front_default(id))
+            .mapImage()
+            .subscribe(
+                onSuccess: { image in
+                    self.image.accept(image)
+                },
+                onFailure: { error in
+                    print(error)
+                }
+            ).disposed(by: disposeBag)
+    }
 }
