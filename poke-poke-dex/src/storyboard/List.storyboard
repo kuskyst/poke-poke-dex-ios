@@ -59,12 +59,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGt-bv-Qz9">
-                                                    <rect key="frame" x="12" y="44.666666666666664" width="142" height="3"/>
+                                                    <rect key="frame" x="12" y="42.666666666666664" width="142" height="3"/>
                                                     <color key="backgroundColor" red="0.99215686319999996" green="0.82352948189999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="3" id="CQk-Ig-qy9"/>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="3" id="vH0-Ua-ant"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -73,7 +77,13 @@
                                                 <constraint firstItem="QFl-bb-nmp" firstAttribute="centerY" secondItem="SBm-ya-Xga" secondAttribute="centerY" id="Kci-Gq-gQ9"/>
                                                 <constraint firstItem="vGt-bv-Qz9" firstAttribute="leading" secondItem="QFl-bb-nmp" secondAttribute="leading" id="Ovy-cT-27x"/>
                                                 <constraint firstItem="QFl-bb-nmp" firstAttribute="leading" secondItem="SBm-ya-Xga" secondAttribute="leading" constant="12" id="U0z-zy-XWH"/>
-                                                <constraint firstItem="vGt-bv-Qz9" firstAttribute="top" secondItem="QFl-bb-nmp" secondAttribute="bottom" constant="3" id="d5J-FH-epb"/>
+                                                <constraint firstItem="vGt-bv-Qz9" firstAttribute="top" secondItem="QFl-bb-nmp" secondAttribute="bottom" constant="1" id="d5J-FH-epb">
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </constraint>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="166" height="64"/>
