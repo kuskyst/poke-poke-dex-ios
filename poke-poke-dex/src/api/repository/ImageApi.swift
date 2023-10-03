@@ -22,9 +22,9 @@ extension ImageApi: TargetType {
     var path: String {
         switch self {
             case .front_default(let id): return "\(id).png"
-        case .back_default(let id): return "/back/\(id).png"
-        case .front_shiny(let id): return "/shiny/\(id).png"
-        case .back_shiny(let id): return "/back/shiny/\(id).png"
+            case .back_default(let id): return "/back/\(id).png"
+            case .front_shiny(let id): return "/shiny/\(id).png"
+            case .back_shiny(let id): return "/back/shiny/\(id).png"
         }
     }
 
