@@ -33,7 +33,7 @@ class ListViewController: UIViewController {
             .disposed(by: disposeBag)
         self.pokemonTable.rx.modelSelected(ListResponse.Results.self)
             .subscribe(onNext: { [weak self] model in
-                self!.selected = Int(model.url.lastPathComponent)!
+                self?.selected = Int(model.url.lastPathComponent)!
                 self?.performSegue(withIdentifier: "toDetail", sender: nil)
             })
             .disposed(by: disposeBag)
