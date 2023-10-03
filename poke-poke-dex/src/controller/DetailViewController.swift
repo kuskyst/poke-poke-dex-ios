@@ -25,14 +25,14 @@ class DetailViewController: UIViewController {
         self.viewModel.fr_def_img.bind(to: img.rx.image).disposed(by: disposeBag)
         self.viewModel.fr_shi_img.bind(to: shinyImg.rx.image).disposed(by: disposeBag)
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            //self.view.hideSkeleton()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            self.view.hideSkeleton()
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.view.showAnimatedSkeleton()
+        self.view.showAnimatedSkeleton()
         self.viewModel.fetchPokeDetail(id: self.id)
         self.viewModel.fetchImage(type: ImageApi.front_default(self.id))
         self.viewModel.fetchImage(type: ImageApi.front_shiny(self.id))

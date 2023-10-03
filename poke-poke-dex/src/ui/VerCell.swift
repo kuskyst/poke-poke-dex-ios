@@ -11,5 +11,9 @@ class VerCell: UICollectionViewCell {
 
     static let identifier: String = "VerCell"
     @IBOutlet weak var ver: UILabel!
+    @IBOutlet private weak var undeline: UIView!
 
+    override var isSelected: Bool {
+        didSet { self.undeline.isHidden = !isSelected }
+    }
 }
