@@ -8,8 +8,8 @@
 import Foundation
 
 struct ListRequest: Decodable {
-    let limit: Int
-    let offset: Int
+    var limit: Int = 20
+    var offset: Int = 0
 }
 
 struct ListResponse: Decodable {

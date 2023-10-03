@@ -16,13 +16,13 @@ class ListViewController: UIViewController {
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
-    private var param = ListRequest(limit: 20, offset: 0)
+    private var param = ListRequest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.view.showAnimatedSkeleton()
+        self.view.showSkeleton()
 
         self.viewModel.pokemons
             .bind(to: tableView.rx.items(
