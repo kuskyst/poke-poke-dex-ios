@@ -81,7 +81,7 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="name" destination="QFl-bb-nmp" id="RTv-km-Rkw"/>
+                                            <outlet property="ver" destination="QFl-bb-nmp" id="kC9-Hx-3XR"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

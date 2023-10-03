@@ -17,7 +17,6 @@ class ListViewController: UIViewController {
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
-    private var param = ListRequest(limit: 20, offset: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,27 +29,40 @@ class ListViewController: UIViewController {
                     self.view.hideSkeleton()
                 }
             .disposed(by: disposeBag)
-        
-        Observable.just(["赤緑", "金銀", "RS", "DP", "BW", "SM", "剣盾"])
-            .bind(to: verCarousel.rx.items(
-                cellIdentifier: VerCell.identifier,
-                cellType: VerCell.self)) { row, element, cell in
-                    cell.name.text = element
-                }
+
+        let data = Observable<[VerCell]>.just([
+            VerCell(name: "赤緑", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "金銀", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "RS", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "DP", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "BW", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "XY", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "SM", param: ListRequest(limit: 151, offset: 0)),
+            VerCell(name: "剣盾", param: ListRequest(limit: 151, offset: 0)),
+        ])
+        data.bind(to: verCarousel.rx.items(
+            cellIdentifier: "VerCell",
+            cellType: VerCell.self)) { row, element, cell in
+                cell.ver.text = element.name
+            }
             .disposed(by: disposeBag)
-        
-        verCarousel.rx.itemSelected
+        self.verCarousel.rx.itemSelected
             .subscribe(onNext: { [unowned self] indexPath in
                 self.verCarousel.scrollToItem(
                     at: indexPath,
                     at: .centeredHorizontally,
                     animated: true)
             }).disposed(by: disposeBag)
+
+        verCarousel.rx.modelSelected(VerCell.self)
+            .subscribe(onNext: { [weak self] model in
+                self!.viewModel.fetchPokeList(param: model.param)
+            }).disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.viewModel.fetchPokeList(param: param)
+        self.viewModel.fetchPokeList(param: ListRequest(limit: 20, offset: 0))
     }
 
 }
