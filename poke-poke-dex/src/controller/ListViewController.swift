@@ -34,7 +34,7 @@ class ListViewController: UIViewController {
         self.pokemonTable.rx.modelSelected(ListResponse.Results.self)
             .subscribe(onNext: { [weak self] model in
                 self?.selected = Int(model.url.lastPathComponent)!
-                self?.performSegue(withIdentifier: "toDetail", sender: nil)
+                self?.performSegue(withIdentifier: DetailViewController.identifier, sender: nil)
             }).disposed(by: disposeBag)
 
         Observable.just(AppConstant.verList)

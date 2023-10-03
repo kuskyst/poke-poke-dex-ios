@@ -10,6 +10,8 @@ import RxSwift
 
 class DetailViewController: UIViewController {
 
+    static let identifier = "toDetail"
+
     var id = 0
     @IBOutlet private var name: UILabel!
     @IBOutlet private var img: UIImageView!
