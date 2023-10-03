@@ -12,8 +12,6 @@ import SkeletonView
 
 class ListViewController: UIViewController {
 
-    private let verList: [String] = ["赤緑", "金銀", "RS", "DP", "BW", "SM", "剣盾"]
-
     @IBOutlet private weak var verCarousel: UICollectionView!
     @IBOutlet private weak var pokemonTable: UITableView!
 
@@ -32,6 +30,22 @@ class ListViewController: UIViewController {
                     self.view.hideSkeleton()
                 }
             .disposed(by: disposeBag)
+        
+        Observable.just(["赤緑", "金銀", "RS", "DP", "BW", "SM", "剣盾"])
+            .bind(to: verCarousel.rx.items(
+                cellIdentifier: VerCell.identifier,
+                cellType: VerCell.self)) { row, element, cell in
+                    cell.name.text = element
+                }
+            .disposed(by: disposeBag)
+        
+        verCarousel.rx.itemSelected
+            .subscribe(onNext: { [unowned self] indexPath in
+                self.verCarousel.scrollToItem(
+                    at: indexPath,
+                    at: .centeredHorizontally,
+                    animated: true)
+            }).disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -39,20 +53,4 @@ class ListViewController: UIViewController {
         self.viewModel.fetchPokeList(param: param)
     }
 
-}
-
-extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        verList.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerCell.identifier, for: indexPath)
-        (cell as! VerCell).name.text = verList[indexPath.row]
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
 }
