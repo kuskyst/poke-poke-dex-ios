@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,11 +47,53 @@
                                     <constraint firstItem="Lzl-9l-nhq" firstAttribute="trailing" secondItem="eOH-NH-xVH" secondAttribute="trailing" constant="-24" id="dr3-uB-Yjo"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-EY-RSO">
+                                <rect key="frame" x="0.0" y="112" width="393" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Jyh-WL-8Ja"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6W1-XW-fv2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VerCell" id="f9K-c0-rnW" customClass="VerCell" customModule="poke_poke_dex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-34" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SBm-ya-Xga">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nal-hL-Y84">
+                                                    <rect key="frame" x="4" y="48.666666666666657" width="120" height="31"/>
+                                                    <color key="tintColor" red="0.99215686319999996" green="0.82352948189999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                        <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                        <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nal-hL-Y84" firstAttribute="trailing" secondItem="SBm-ya-Xga" secondAttribute="trailing" constant="-4" id="5fZ-lh-9wi"/>
+                                                <constraint firstItem="nal-hL-Y84" firstAttribute="centerY" secondItem="SBm-ya-Xga" secondAttribute="centerY" id="cB0-TT-nDZ"/>
+                                                <constraint firstItem="nal-hL-Y84" firstAttribute="leading" secondItem="SBm-ya-Xga" secondAttribute="leading" constant="4" id="yoD-Tx-CI0"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="nal-hL-Y84" id="gfd-S3-HUE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-QX-Aay">
-                                <rect key="frame" x="0.0" y="112" width="393" height="740"/>
+                                <rect key="frame" x="0.0" y="172" width="393" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PokemonCell" rowHeight="130" id="SJq-GG-4Gt" customClass="PokemonCell" customModule="poke_poke_dex" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PokemonCell" rowHeight="130" id="SJq-GG-4Gt" userLabel="Pokemon Cell" customClass="PokemonCell" customModule="poke_poke_dex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJq-GG-4Gt" id="Kny-HW-7Pz">
@@ -128,11 +171,14 @@
                             <constraint firstItem="CTE-QX-Aay" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="EA2-o2-itj"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="leading" secondItem="efN-hy-FVn" secondAttribute="leading" id="J28-Tk-FBo"/>
                             <constraint firstItem="eOH-NH-xVH" firstAttribute="top" secondItem="OpM-YO-OZA" secondAttribute="bottom" id="MmF-tV-btN"/>
+                            <constraint firstItem="cA2-EY-RSO" firstAttribute="leading" secondItem="efN-hy-FVn" secondAttribute="leading" id="S22-mG-46t"/>
                             <constraint firstItem="CTE-QX-Aay" firstAttribute="bottom" secondItem="f9X-9t-UJZ" secondAttribute="bottom" id="Ud5-Gf-41P"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="bottom" secondItem="eOH-NH-xVH" secondAttribute="top" id="YLo-xF-lA8"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="ZAH-Cl-88S"/>
                             <constraint firstItem="OpM-YO-OZA" firstAttribute="top" secondItem="f9X-9t-UJZ" secondAttribute="top" id="eQS-nP-5Hj"/>
-                            <constraint firstItem="CTE-QX-Aay" firstAttribute="top" secondItem="eOH-NH-xVH" secondAttribute="bottom" id="jIU-zv-i7j"/>
+                            <constraint firstItem="cA2-EY-RSO" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="f3n-Bb-j8k"/>
+                            <constraint firstItem="CTE-QX-Aay" firstAttribute="top" secondItem="cA2-EY-RSO" secondAttribute="bottom" id="jIU-zv-i7j"/>
+                            <constraint firstItem="cA2-EY-RSO" firstAttribute="top" secondItem="eOH-NH-xVH" secondAttribute="bottom" id="l9G-mI-U20"/>
                             <constraint firstItem="eOH-NH-xVH" firstAttribute="trailing" secondItem="efN-hy-FVn" secondAttribute="trailing" id="nLR-rv-hNO"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -141,7 +187,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="リスト" image="list.bullet" catalog="system" id="orc-0k-dGq"/>
                     <connections>
-                        <outlet property="tableView" destination="CTE-QX-Aay" id="W2O-lF-XcD"/>
+                        <outlet property="pokemonTable" destination="CTE-QX-Aay" id="T7P-0m-Yld"/>
+                        <outlet property="verCarousel" destination="cA2-EY-RSO" id="aqN-aW-h6t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lz0-ce-XnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,6 +202,9 @@
         <image name="tie" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
