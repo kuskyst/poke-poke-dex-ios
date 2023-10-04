@@ -48,14 +48,14 @@ class ListViewController: UIViewController {
             .subscribe(onNext: { [unowned self] indexPath in
                 self.verCarousel.scrollToItem(
                     at: indexPath, at: .centeredHorizontally, animated: true)
-                self.view.showAnimatedSkeleton()
+                self.view.showAnimatedGradientSkeleton()
                 self.viewModel.fetchPokeList(param: AppConstant.paramList[indexPath.row])
             }).disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.showAnimatedSkeleton()
+        self.view.showAnimatedGradientSkeleton()
         self.viewModel.fetchPokeList(param: ListRequest(limit: 20, offset: 0))
     }
 

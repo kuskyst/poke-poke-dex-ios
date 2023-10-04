@@ -13,27 +13,52 @@ class DetailViewController: UIViewController {
     static let identifier = "toDetail"
 
     var id = 0
-    @IBOutlet private var name: UILabel!
     @IBOutlet private var img: UIImageView!
     @IBOutlet private var shinyImg: UIImageView!
+    @IBOutlet private var name: UILabel!
+    @IBOutlet private var genera: UILabel!
+    @IBOutlet private var type: UILabel!
+    @IBOutlet private var htwt: UILabel!
+    @IBOutlet private var eggGroup: UILabel!
+    @IBOutlet private var flavorTable: UITableView!
 
     private let viewModel = DetailViewModel()
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.pokemon.subscribe(onNext: { _ in
-            self.view.hideSkeleton()
-        }).disposed(by: disposeBag)
-        self.viewModel.name.bind(to: name.rx.text).disposed(by: disposeBag)
-        self.viewModel.fr_def_img.bind(to: img.rx.image).disposed(by: disposeBag)
-        self.viewModel.fr_shi_img.bind(to: shinyImg.rx.image).disposed(by: disposeBag)
+        Observable.zip(
+                self.viewModel.pokemon,
+                self.viewModel.species,
+                self.viewModel.fr_def_img,
+                self.viewModel.fr_shi_img)
+            .subscribe(onNext: { pokemon, species, img, shiImg in
+                self.view.hideSkeleton()
+                self.name.text = "No.\(pokemon.id) \(pokemon.name)"
+                self.htwt.text = "\(pokemon.weight / 10)kg / \(pokemon.height / 10)m"
+                self.type.text = pokemon.types.count < 2 ? pokemon.types[0].type.name
+                    : pokemon.types[0].type.name + " / " + pokemon.types[1].type.name
+                self.genera.text = species.genera.filter { $0.language.name == "en" }.first!.genus
+                self.eggGroup.text = species.egg_groups.count < 2 ? species.egg_groups[0].name
+                    : species.egg_groups[0].name + " / " + species.egg_groups[1].name
+                self.img.image = img
+                self.shinyImg.image = shiImg
+            }).disposed(by: disposeBag)
 
+        self.viewModel.flavors
+            .bind(to: flavorTable.rx.items(
+                cellIdentifier: FlavorCell.identifier,
+                cellType: FlavorCell.self)) { row, element, cell in
+                    cell.version.text = element.version.name
+                    cell.flavorText.text = element.flavor_text
+                }
+            .disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.showAnimatedSkeleton()
+        self.view.showAnimatedGradientSkeleton()
+        self.viewModel.fetchPokeSpecies(id: self.id)
         self.viewModel.fetchPokeDetail(id: self.id)
         self.viewModel.fetchImage(type: ImageApi.front_default(self.id))
         self.viewModel.fetchImage(type: ImageApi.front_shiny(self.id))

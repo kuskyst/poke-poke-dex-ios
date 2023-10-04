@@ -11,6 +11,7 @@ import Moya
 enum PokeApi {
     case list(Int, Int)
     case detail(Int)
+    case species(Int)
 }
 
 extension PokeApi: TargetType {
@@ -21,6 +22,7 @@ extension PokeApi: TargetType {
         switch self {
             case .list(_, _): return "/pokemon"
             case .detail(let id): return "/pokemon/\(id)"
+            case .species(let id): return "/pokemon-species/\(id)"
         }
     }
 
@@ -35,6 +37,7 @@ extension PokeApi: TargetType {
                     parameters: ["limit": limit, "offset": offset],
                     encoding: URLEncoding.queryString)
             case .detail(_): return .requestPlain
+            case .species(_): return .requestPlain
         }
     }
 

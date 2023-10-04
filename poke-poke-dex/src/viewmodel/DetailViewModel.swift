@@ -15,7 +15,8 @@ class DetailViewModel {
     private let disposeBag = DisposeBag()
 
     let pokemon = PublishRelay<DetailResponse>()
-    let name = PublishRelay<String>()
+    let species = PublishRelay<SpeciesResponse>()
+    let flavors = PublishRelay<[SpeciesResponse.FlavorTextEntries]>()
     let fr_def_img = PublishRelay<UIImage>()
     let fr_shi_img = PublishRelay<UIImage>()
     let bk_def_img = PublishRelay<UIImage>()
@@ -29,7 +30,22 @@ class DetailViewModel {
             .subscribe(
                 onSuccess: { pokemon in
                     self.pokemon.accept(pokemon)
-                    self.name.accept("No.\(pokemon.id) \(pokemon.name)")
+                },
+                onFailure: { error in
+                    print(error)
+                }
+            ).disposed(by: disposeBag)
+    }
+
+    func fetchPokeSpecies(id: Int) {
+        let provider = MoyaProvider<PokeApi>()
+        provider.rx.request(.species(id))
+            .filterSuccessfulStatusCodes()
+            .map(SpeciesResponse.self)
+            .subscribe(
+                onSuccess: { species in
+                    self.species.accept(species)
+                    self.flavors.accept(species.flavor_text_entries.filter { $0.language.name == "ja" } )
                 },
                 onFailure: { error in
                     print(error)
