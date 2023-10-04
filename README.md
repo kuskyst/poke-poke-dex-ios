@@ -4,11 +4,11 @@
 | # | |
 | ---- | ---- |
 | Language| Swift5 |
-| Archtecture | MVVM |
+| Architecture | MVVM |
 | UI | UIKit |
 | Library Management | Swift Package Manager |
 | Asynchronous | Moya, RxMoya |
-| etc | RxSwift, Rxcocoa, DGCharts, Skeltonview |
+| etc | RxSwift, RxCocoa, DGCharts, Skeltonview |
 
 # Todo List
 - [x] make UI 
