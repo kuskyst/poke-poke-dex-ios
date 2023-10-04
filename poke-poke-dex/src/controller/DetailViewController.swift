@@ -21,6 +21,7 @@ class DetailViewController: UIViewController {
     @IBOutlet private var htwt: UILabel!
     @IBOutlet private var eggGroup: UILabel!
     @IBOutlet private var flavorTable: UITableView!
+    @IBOutlet private var statusChart: StatusChart!
 
     private let viewModel = DetailViewModel()
     private let disposeBag = DisposeBag()
@@ -37,12 +38,13 @@ class DetailViewController: UIViewController {
                 self.name.text = "No.\(pokemon.id) \(pokemon.name)"
                 self.htwt.text = "\(pokemon.weight / 10)kg / \(pokemon.height / 10)m"
                 self.type.text = pokemon.types.count < 2 ? pokemon.types[0].type.name
-                    : pokemon.types[0].type.name + " / " + pokemon.types[1].type.name
+                    : "\(pokemon.types[0].type.name) / \(pokemon.types[1].type.name)"
                 self.genera.text = species.genera.filter { $0.language.name == "en" }.first!.genus
                 self.eggGroup.text = species.egg_groups.count < 2 ? species.egg_groups[0].name
-                    : species.egg_groups[0].name + " / " + species.egg_groups[1].name
+                    : "\(species.egg_groups[0].name) / \(species.egg_groups[1].name)"
                 self.img.image = img
                 self.shinyImg.image = shiImg
+                pokemon.stats.forEach({ stat in self.statusChart.stats.append(stat.base_stat) })
             }).disposed(by: disposeBag)
 
         self.viewModel.flavors

@@ -17,4 +17,5 @@ class AppConstant {
         ListRequest(limit: 88, offset: 721),
         ListRequest(limit: 89, offset: 809)
     ]
+    static let statusLabel = ["H", "A", "B", "C", "D", "S"]
 }
