@@ -33,6 +33,7 @@
 		C92FE7A52ACC305F000E799F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92FE7A42ACC305F000E799F /* Detail.storyboard */; };
 		C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA8B952ACC23D90092E924 /* AppConstant.swift */; };
 		C9DD70D72ACC30FC0016E071 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */; };
+		EC1267BE2ACD3E42006947B9 /* FlavorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1267BD2ACD3E42006947B9 /* FlavorCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C92FE7A42ACC305F000E799F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		C9BA8B952ACC23D90092E924 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EC1267BD2ACD3E42006947B9 /* FlavorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		C91DD4852AC90FA4002EC78C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				EC1267BD2ACD3E42006947B9 /* FlavorCell.swift */,
 				C91DD4862AC90FB1002EC78C /* PokemonCell.swift */,
 				C91DD4C12ACBE56E002EC78C /* VerCell.swift */,
 			);
@@ -406,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DD70D72ACC30FC0016E071 /* DetailViewController.swift in Sources */,
+				EC1267BE2ACD3E42006947B9 /* FlavorCell.swift in Sources */,
 				C91DD4982AC973CA002EC78C /* ListViewModel.swift in Sources */,
 				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
 				C91DD4B92ACB8A50002EC78C /* ImageApi.swift in Sources */,
