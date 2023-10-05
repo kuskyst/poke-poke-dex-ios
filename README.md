@@ -4,16 +4,16 @@
 | # | |
 | ---- | ---- |
 | Language| Swift5 |
-| Architecture | MVVM |
-| UI | UIKit |
 | Library Management | Swift Package Manager |
+| Architecture | MVVM |
+| UI | UIKit, SkeltonView, DGCharts |
 | Asynchronous | Moya, RxMoya |
-| etc | RxSwift, RxCocoa, DGCharts, Skeltonview |
+| etc | RxSwift, RxCocoa |
 
 # Todo List
 - [x] make UI 
-- [ ] network error handling (PublishSubject or BehaviorSubject ?)
-- [ ] Dependency injection
+- [ ] handle network error  (PublishSubject or BehaviorSubject ?)
+- [ ] classify Dependency Injection
 - [ ] write UnitTest / UITest
 
 # Image
