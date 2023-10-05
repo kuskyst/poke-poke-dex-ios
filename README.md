@@ -3,7 +3,7 @@
 
 | # | |
 | ---- | ---- |
-| Language| Swift5 |
+| Language| Swift 5 |
 | Library Management | Swift Package Manager |
 | Architecture | MVVM |
 | UI | UIKit, SkeltonView, DGCharts |
