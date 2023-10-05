@@ -16,7 +16,6 @@ class StatusChart: BarChartView {
                     BarChartDataEntry(x: Double($0.offset), y: Double($0.element))
                 })
             )
-            self.leftAxis.axisMaximum = Double(stats.max()! > 130 ? stats.max()! : 130)
         }
     }
 
