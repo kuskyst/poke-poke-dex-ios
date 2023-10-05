@@ -2,7 +2,7 @@
 //  PokeApi.swift
 //  poke-poke-dex
 //
-//  Created by kohaka on 2022/10/02.
+//  Created by kohsaka on 2022/10/02.
 //
 
 import Foundation
@@ -41,7 +41,7 @@ extension PokeApi: TargetType {
         }
     }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 

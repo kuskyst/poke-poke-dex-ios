@@ -36,7 +36,7 @@ extension ImageApi: TargetType {
         return .requestPlain
     }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 
