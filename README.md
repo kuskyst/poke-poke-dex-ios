@@ -6,7 +6,7 @@
 | Language| Swift 5 |
 | Library Management | Swift Package Manager |
 | Architecture | MVVM |
-| UI | UIKit, SkeletonView, DGCharts |
+| UI | UIKit, Parchment, SkeletonView, DGCharts |
 | Asynchronous | Moya, RxMoya |
 | etc | RxSwift, RxCocoa |
 
@@ -17,8 +17,8 @@
 - [ ] write UnitTest / UITest
 
 # Image
-<img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/9f4c2f7f-91d5-4e63-9f85-cfc0fad8fb28">
+<img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/21025d76-4361-4a25-afe7-ff8c4d46f545">
 →→→
-<img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/444702ba-4cb9-4996-8998-98af6db26bab">
+<img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/48d5091b-b7a2-414c-86e0-28e3d9b4d6d6">
 →→→
-<img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/9613a7eb-7d7a-47c6-b15e-6ca9202791ab">
+<img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/311bff2e-d436-426a-b93f-b6230726c8f9">
