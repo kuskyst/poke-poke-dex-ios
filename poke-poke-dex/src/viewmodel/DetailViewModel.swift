@@ -44,8 +44,8 @@ class DetailViewModel {
             .map(SpeciesResponse.self)
             .subscribe(
                 onSuccess: { species in
-                    self.species.accept(species)
                     self.flavors.accept(species.flavor_text_entries.filter { $0.language.name == "ja" } )
+                    self.species.accept(species)
                 },
                 onFailure: { error in
                     print(error)

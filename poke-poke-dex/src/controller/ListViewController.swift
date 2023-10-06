@@ -12,15 +12,18 @@ import SkeletonView
 
 class ListViewController: UIViewController {
 
-    @IBOutlet private weak var verCarousel: UICollectionView!
+    var version = 0
+    private var selected = 0
+    static let identifier = "listViewController"
+
     @IBOutlet private weak var pokemonTable: UITableView!
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
-    private var selected = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pokemonTable.rowHeight = UITableView.automaticDimension
         self.viewModel.pokemons
             .bind(to: pokemonTable.rx.items(
                 cellIdentifier: PokemonCell.identifier,
@@ -36,27 +39,12 @@ class ListViewController: UIViewController {
                 self?.selected = Int(model.url.lastPathComponent)!
                 self?.performSegue(withIdentifier: DetailViewController.identifier, sender: nil)
             }).disposed(by: disposeBag)
-
-        Observable.just(AppConstant.verList)
-            .bind(to: verCarousel.rx.items(
-                cellIdentifier: VerCell.identifier,
-                cellType: VerCell.self)) { row, element, cell in
-                    cell.ver.text = element
-                }
-            .disposed(by: disposeBag)
-        self.verCarousel.rx.itemSelected
-            .subscribe(onNext: { [unowned self] indexPath in
-                self.verCarousel.scrollToItem(
-                    at: indexPath, at: .centeredHorizontally, animated: true)
-                self.view.showAnimatedGradientSkeleton()
-                self.viewModel.fetchPokeList(param: AppConstant.paramList[indexPath.row])
-            }).disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.showAnimatedGradientSkeleton()
-        self.viewModel.fetchPokeList(param: ListRequest(limit: 20, offset: 0))
+        self.viewModel.fetchPokeList(param: AppConstant.paramList[self.version])
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

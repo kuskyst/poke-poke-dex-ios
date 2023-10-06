@@ -22,12 +22,16 @@ class DetailViewController: UIViewController {
     @IBOutlet private var eggGroup: UILabel!
     @IBOutlet private var flavorTable: UITableView!
     @IBOutlet private var statusChart: StatusChart!
+    @IBOutlet private var close: UIButton!
 
     private let viewModel = DetailViewModel()
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.close.rx.tap.subscribe{ _ in
+            self.dismiss(animated: true)
+        }.disposed(by: disposeBag)
         Observable.zip(
                 self.viewModel.pokemon,
                 self.viewModel.species,
@@ -66,7 +70,4 @@ class DetailViewController: UIViewController {
         self.viewModel.fetchImage(type: ImageApi.front_shiny(self.id))
     }
 
-    @IBAction private func dismiss() {
-        dismiss(animated: true)
-    }
 }
