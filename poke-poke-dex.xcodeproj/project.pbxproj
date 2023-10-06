@@ -22,7 +22,6 @@
 		C91DD4AF2ACA8D6E002EC78C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */; };
 		C91DD4B62ACAEEE6002EC78C /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = C91DD4B52ACAEEE6002EC78C /* SkeletonView */; };
 		C91DD4B92ACB8A50002EC78C /* ImageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4B82ACB8A50002EC78C /* ImageApi.swift */; };
-		C91DD4C22ACBE56E002EC78C /* VerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4C12ACBE56E002EC78C /* VerCell.swift */; };
 		C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */; };
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
 		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
@@ -31,6 +30,8 @@
 		C9243FF02AC88C75003EE2FC /* poke_poke_dexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */; };
 		C9243FF22AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */; };
 		C92FE7A52ACC305F000E799F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92FE7A42ACC305F000E799F /* Detail.storyboard */; };
+		C9B173682AD0505A00C14763 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B173672AD0505A00C14763 /* TabViewController.swift */; };
+		C9B1736B2AD0507B00C14763 /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = C9B1736A2AD0507B00C14763 /* Parchment */; };
 		C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA8B952ACC23D90092E924 /* AppConstant.swift */; };
 		C9DD70D72ACC30FC0016E071 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */; };
 		C9F1DA112ACD982B0069A63B /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = C9F1DA102ACD982B0069A63B /* DGCharts */; };
@@ -66,7 +67,6 @@
 		C91DD4AA2ACA85A9002EC78C /* PokeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApi.swift; sourceTree = "<group>"; };
 		C91DD4AE2ACA8D6E002EC78C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C91DD4B82ACB8A50002EC78C /* ImageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApi.swift; sourceTree = "<group>"; };
-		C91DD4C12ACBE56E002EC78C /* VerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerCell.swift; sourceTree = "<group>"; };
 		C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "poke-poke-dex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FCE2AC88C74003EE2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexUITests.swift; sourceTree = "<group>"; };
 		C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C92FE7A42ACC305F000E799F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		C9B173672AD0505A00C14763 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		C9BA8B952ACC23D90092E924 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C9F1DA142ACD9C560069A63B /* StatusChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusChart.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 				C91DD4AD2ACA8854002EC78C /* RxMoya in Frameworks */,
 				C91DD49D2AC97494002EC78C /* RxRelay in Frameworks */,
 				C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */,
+				C9B1736B2AD0507B00C14763 /* Parchment in Frameworks */,
 				C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */,
 				C9F1DA132ACD982B0069A63B /* DGChartsDynamic in Frameworks */,
 				C91DD4B62ACAEEE6002EC78C /* SkeletonView in Frameworks */,
@@ -124,7 +126,6 @@
 				EC1267BD2ACD3E42006947B9 /* FlavorCell.swift */,
 				C91DD4862AC90FB1002EC78C /* PokemonCell.swift */,
 				C9F1DA142ACD9C560069A63B /* StatusChart.swift */,
-				C91DD4C12ACBE56E002EC78C /* VerCell.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -224,6 +225,7 @@
 			children = (
 				C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */,
 				C9243FD22AC88C74003EE2FC /* ListViewController.swift */,
+				C9B173672AD0505A00C14763 /* TabViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -295,6 +297,7 @@
 				C91DD4B52ACAEEE6002EC78C /* SkeletonView */,
 				C9F1DA102ACD982B0069A63B /* DGCharts */,
 				C9F1DA122ACD982B0069A63B /* DGChartsDynamic */,
+				C9B1736A2AD0507B00C14763 /* Parchment */,
 			);
 			productName = "poke-poke-dex";
 			productReference = C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */;
@@ -373,6 +376,7 @@
 				C91DD4A72ACA8578002EC78C /* XCRemoteSwiftPackageReference "Moya" */,
 				C91DD4B42ACAEEE6002EC78C /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				C9F1DA0F2ACD982B0069A63B /* XCRemoteSwiftPackageReference "charts" */,
+				C9B173692AD0507B00C14763 /* XCRemoteSwiftPackageReference "Parchment" */,
 			);
 			productRefGroup = C9243FCC2AC88C74003EE2FC /* Products */;
 			projectDirPath = "";
@@ -424,7 +428,6 @@
 				C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */,
 				C91DD4B92ACB8A50002EC78C /* ImageApi.swift in Sources */,
 				C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */,
-				C91DD4C22ACBE56E002EC78C /* VerCell.swift in Sources */,
 				C91DD4A62AC9778A002EC78C /* DetailModel.swift in Sources */,
 				C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */,
 				C91DD4AF2ACA8D6E002EC78C /* DetailViewModel.swift in Sources */,
@@ -432,6 +435,7 @@
 				C91DD4A42AC976E9002EC78C /* ListModel.swift in Sources */,
 				C9243FCF2AC88C74003EE2FC /* AppDelegate.swift in Sources */,
 				C91DD4AB2ACA85A9002EC78C /* PokeApi.swift in Sources */,
+				C9B173682AD0505A00C14763 /* TabViewController.swift in Sources */,
 				C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +602,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = List;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,6 +634,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = List;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,6 +795,14 @@
 				minimumVersion = 1.30.4;
 			};
 		};
+		C9B173692AD0507B00C14763 /* XCRemoteSwiftPackageReference "Parchment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rechsteiner/Parchment";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		C9F1DA0F2ACD982B0069A63B /* XCRemoteSwiftPackageReference "charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/charts";
@@ -829,6 +843,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C91DD4B42ACAEEE6002EC78C /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
+		};
+		C9B1736A2AD0507B00C14763 /* Parchment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9B173692AD0507B00C14763 /* XCRemoteSwiftPackageReference "Parchment" */;
+			productName = Parchment;
 		};
 		C9F1DA102ACD982B0069A63B /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -27,9 +27,6 @@
                                 <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=" ">
                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="dismiss" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZGt-4V-3q1"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No.- - " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-xs-2dB">
                                 <rect key="frame" x="136.66666666666666" y="71" width="119.99999999999997" height="34"/>
@@ -402,6 +399,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="close" destination="pd7-87-ctA" id="ITP-5D-evW"/>
                         <outlet property="eggGroup" destination="QDc-kY-2Tp" id="2bB-e4-tcI"/>
                         <outlet property="flavorTable" destination="LEv-3u-BdB" id="Q1V-8p-uZ0"/>
                         <outlet property="genera" destination="T96-2K-XMR" id="CCa-1l-ZyQ"/>
@@ -424,7 +422,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
