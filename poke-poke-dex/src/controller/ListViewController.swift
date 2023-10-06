@@ -23,7 +23,6 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pokemonTable.rowHeight = UITableView.automaticDimension
         self.viewModel.pokemons
             .bind(to: pokemonTable.rx.items(
                 cellIdentifier: PokemonCell.identifier,

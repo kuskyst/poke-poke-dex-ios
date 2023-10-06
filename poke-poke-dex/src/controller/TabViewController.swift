@@ -15,11 +15,11 @@ class TabViewController: UIViewController {
         super.viewDidLoad()
         var vcs: [ListViewController] = []
         AppConstant.verList.enumerated().forEach { index, ver in
-            let vc = storyboard!.instantiateViewController(identifier:
-                ListViewController.identifier) as ListViewController?
-            vc!.version = index
-            vc!.title = ver
-            vcs.append(vc!)
+            let vc = self.storyboard!.instantiateViewController(identifier:
+                ListViewController.identifier) as! ListViewController
+            vc.version = index
+            vc.title = ver
+            vcs.append(vc)
         }
         let pagingViewController = PagingViewController(viewControllers: vcs)
 
