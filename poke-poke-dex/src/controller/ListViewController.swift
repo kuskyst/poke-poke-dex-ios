@@ -28,10 +28,8 @@ class ListViewController: UIViewController {
             .bind(to: pokemonTable.rx.items(
                 cellIdentifier: PokemonCell.identifier,
                 cellType: PokemonCell.self)) { row, element, cell in
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                        self.view.hideSkeleton()
-                        cell.configureCell(model: element)
-                    }
+                    cell.configureCell(model: element)
+                    self.view.hideSkeleton()
                 }
             .disposed(by: disposeBag)
         self.pokemonTable.rx.modelSelected(ListResponse.Results.self)
