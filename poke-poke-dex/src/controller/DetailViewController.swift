@@ -40,7 +40,7 @@ class DetailViewController: UIViewController {
             .subscribe(onNext: { pokemon, species, img, shiImg in
                 self.view.hideSkeleton()
                 self.name.text = "No.\(pokemon.id) \(pokemon.name)"
-                self.htwt.text = "\(pokemon.height / 10)kg / \(pokemon.weight / 10)m"
+                self.htwt.text = "\(pokemon.height / 10)m / \(pokemon.weight / 10)kg"
                 self.type.text = pokemon.types.count < 2 ? pokemon.types[0].type.name
                     : "\(pokemon.types[0].type.name) / \(pokemon.types[1].type.name)"
                 self.genera.text = species.genera.filter { $0.language.name == "en" }.first!.genus
