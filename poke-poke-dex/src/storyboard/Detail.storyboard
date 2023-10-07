@@ -42,10 +42,20 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQQ-Kw-VVW" userLabel="Image List">
-                                <rect key="frame" x="70.666666666666686" y="105" width="252" height="96"/>
+                                <rect key="frame" x="4.6666666666666572" y="105" width="384" height="96"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-Q1-8nc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="amo-fc-1NJ">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="FEv-g5-YCP"/>
+                                            <constraint firstAttribute="width" constant="96" id="evz-T1-39b"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-Q1-8nc">
+                                        <rect key="frame" x="96" y="0.0" width="96" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="96" id="LBb-nO-BmJ"/>
                                             <constraint firstAttribute="height" constant="96" id="yPG-L2-e3c"/>
@@ -54,18 +64,21 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-FW-6kz">
-                                        <rect key="frame" x="95.999999999999986" y="0.0" width="60.000000000000014" height="96"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="96L-wD-PnH"/>
-                                        </constraints>
-                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUm-Ce-PhO">
-                                        <rect key="frame" x="156" y="0.0" width="96" height="96"/>
+                                        <rect key="frame" x="192" y="0.0" width="96" height="96"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="96" id="9RN-1v-7CJ"/>
                                             <constraint firstAttribute="width" constant="96" id="Tq4-nm-TiT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVn-4g-Lzi">
+                                        <rect key="frame" x="288" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="Vn8-mk-piT"/>
+                                            <constraint firstAttribute="width" constant="96" id="gA1-tC-s61"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -399,6 +412,8 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="backImg" destination="amo-fc-1NJ" id="0Jb-hF-e50"/>
+                        <outlet property="backShinyImg" destination="aVn-4g-Lzi" id="xqn-He-bqN"/>
                         <outlet property="close" destination="pd7-87-ctA" id="ITP-5D-evW"/>
                         <outlet property="eggGroup" destination="QDc-kY-2Tp" id="2bB-e4-tcI"/>
                         <outlet property="flavorTable" destination="LEv-3u-BdB" id="Q1V-8p-uZ0"/>
