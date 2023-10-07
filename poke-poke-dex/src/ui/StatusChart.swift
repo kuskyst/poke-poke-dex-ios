@@ -32,6 +32,7 @@ class StatusChart: BarChartView {
         self.highlightPerTapEnabled = false
         self.pinchZoomEnabled = false
         self.doubleTapToZoomEnabled = false
+        self.dragEnabled = false
         self.extraTopOffset = 0
         self.extraRightOffset = 0
         self.extraLeftOffset = 0

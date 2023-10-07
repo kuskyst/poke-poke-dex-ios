@@ -70,6 +70,7 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.showAnimatedGradientSkeleton()
+        self.statusChart.stats = []
         self.viewModel.fetchPokeSpecies(id: self.id)
         self.viewModel.fetchPokeDetail(id: self.id)
         self.viewModel.fetchImage(type: ImageApi.front_default(self.id))

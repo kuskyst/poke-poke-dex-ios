@@ -29,9 +29,9 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No.- - " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOV-xs-2dB">
-                                <rect key="frame" x="136.66666666666666" y="71" width="119.99999999999997" height="34"/>
+                                <rect key="frame" x="96.666666666666686" y="71" width="200" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ACa-Qj-lYQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ACa-Qj-lYQ"/>
                                     <constraint firstAttribute="height" constant="34" id="sSy-S6-4PO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
