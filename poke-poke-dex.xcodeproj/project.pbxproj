@@ -35,7 +35,6 @@
 		C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA8B952ACC23D90092E924 /* AppConstant.swift */; };
 		C9DD70D72ACC30FC0016E071 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */; };
 		C9F1DA112ACD982B0069A63B /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = C9F1DA102ACD982B0069A63B /* DGCharts */; };
-		C9F1DA132ACD982B0069A63B /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C9F1DA122ACD982B0069A63B /* DGChartsDynamic */; };
 		C9F1DA152ACD9C560069A63B /* StatusChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1DA142ACD9C560069A63B /* StatusChart.swift */; };
 		EC1267BE2ACD3E42006947B9 /* FlavorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1267BD2ACD3E42006947B9 /* FlavorCell.swift */; };
 /* End PBXBuildFile section */
@@ -96,7 +95,6 @@
 				C91DD49B2AC9748F002EC78C /* RxSwift in Frameworks */,
 				C9B1736B2AD0507B00C14763 /* Parchment in Frameworks */,
 				C91DD49F2AC97497002EC78C /* RxCocoa in Frameworks */,
-				C9F1DA132ACD982B0069A63B /* DGChartsDynamic in Frameworks */,
 				C91DD4B62ACAEEE6002EC78C /* SkeletonView in Frameworks */,
 				C9F1DA112ACD982B0069A63B /* DGCharts in Frameworks */,
 				C91DD4A92ACA8585002EC78C /* Moya in Frameworks */,
@@ -296,7 +294,6 @@
 				C91DD4AC2ACA8854002EC78C /* RxMoya */,
 				C91DD4B52ACAEEE6002EC78C /* SkeletonView */,
 				C9F1DA102ACD982B0069A63B /* DGCharts */,
-				C9F1DA122ACD982B0069A63B /* DGChartsDynamic */,
 				C9B1736A2AD0507B00C14763 /* Parchment */,
 			);
 			productName = "poke-poke-dex";
@@ -853,11 +850,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C9F1DA0F2ACD982B0069A63B /* XCRemoteSwiftPackageReference "charts" */;
 			productName = DGCharts;
-		};
-		C9F1DA122ACD982B0069A63B /* DGChartsDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C9F1DA0F2ACD982B0069A63B /* XCRemoteSwiftPackageReference "charts" */;
-			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
