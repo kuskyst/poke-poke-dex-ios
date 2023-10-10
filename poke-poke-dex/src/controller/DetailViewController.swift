@@ -15,6 +15,8 @@ class DetailViewController: UIViewController {
     var id = 0
     @IBOutlet private var img: UIImageView!
     @IBOutlet private var shinyImg: UIImageView!
+    @IBOutlet private var backImg: UIImageView!
+    @IBOutlet private var backShinyImg: UIImageView!
     @IBOutlet private var name: UILabel!
     @IBOutlet private var genera: UILabel!
     @IBOutlet private var type: UILabel!
@@ -36,11 +38,13 @@ class DetailViewController: UIViewController {
                 self.viewModel.pokemon,
                 self.viewModel.species,
                 self.viewModel.fr_def_img,
-                self.viewModel.fr_shi_img)
-            .subscribe(onNext: { pokemon, species, img, shiImg in
+                self.viewModel.fr_shi_img,
+                self.viewModel.bk_def_img,
+                self.viewModel.bk_shi_img)
+            .subscribe(onNext: { pokemon, species, img, shiImg, bkImg, bkShiImg in
                 self.view.hideSkeleton()
                 self.name.text = "No.\(pokemon.id) \(pokemon.name)"
-                self.htwt.text = "\(pokemon.height / 10)kg / \(pokemon.weight / 10)m"
+                self.htwt.text = "\(pokemon.height / 10)m / \(pokemon.weight / 10)kg"
                 self.type.text = pokemon.types.count < 2 ? pokemon.types[0].type.name
                     : "\(pokemon.types[0].type.name) / \(pokemon.types[1].type.name)"
                 self.genera.text = species.genera.filter { $0.language.name == "en" }.first!.genus
@@ -48,6 +52,8 @@ class DetailViewController: UIViewController {
                     : "\(species.egg_groups[0].name) / \(species.egg_groups[1].name)"
                 self.img.image = img
                 self.shinyImg.image = shiImg
+                self.backImg.image = bkImg
+                self.backShinyImg.image = bkShiImg
                 pokemon.stats.forEach({ stat in self.statusChart.stats.append(stat.base_stat) })
             }).disposed(by: disposeBag)
 
@@ -64,10 +70,13 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.showAnimatedGradientSkeleton()
+        self.statusChart.stats = []
         self.viewModel.fetchPokeSpecies(id: self.id)
         self.viewModel.fetchPokeDetail(id: self.id)
         self.viewModel.fetchImage(type: ImageApi.front_default(self.id))
         self.viewModel.fetchImage(type: ImageApi.front_shiny(self.id))
+        self.viewModel.fetchImage(type: ImageApi.back_default(self.id))
+        self.viewModel.fetchImage(type: ImageApi.back_shiny(self.id))
     }
 
 }
