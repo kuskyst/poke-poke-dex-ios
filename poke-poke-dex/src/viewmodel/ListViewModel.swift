@@ -14,7 +14,8 @@ class ListViewModel {
 
     private let disposeBag = DisposeBag()
 
-    let pokemons = PublishSubject<[ListResponse.Results]>()
+    let pokemons = PublishRelay<[ListResponse.Results]>()
+    let error = PublishRelay<Error>()
 
     func fetchPokeList(param: ListRequest) {
         let provider = MoyaProvider<PokeApi>()
@@ -23,10 +24,10 @@ class ListViewModel {
             .map(ListResponse.self)
             .subscribe(
                 onSuccess: { pokemons in
-                    self.pokemons.onNext(pokemons.results)
+                    self.pokemons.accept(pokemons.results)
                 },
                 onFailure: { error in
-                    self.pokemons.onError(error)
+                    self.error.accept(error)
                 }
             ).disposed(by: disposeBag)
     }
