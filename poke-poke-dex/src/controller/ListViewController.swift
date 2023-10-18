@@ -34,19 +34,21 @@ class ListViewController: UIViewController {
                 }
             .disposed(by: disposeBag)
         self.pokemonTable.rx.modelSelected(ListResponse.Results.self)
-            .subscribe(onNext: { [weak self] model in
-                self?.selected = Int(model.url.lastPathComponent)!
-                self?.performSegue(withIdentifier: DetailViewController.identifier, sender: nil)
-            }).disposed(by: disposeBag)
+            .subscribe(
+                onNext: { [weak self] model in
+                    self?.selected = Int(model.url.lastPathComponent)!
+                    self?.performSegue(withIdentifier: DetailViewController.identifier, sender: nil)
+                },
+                onError: { [weak self] error in
+                    self?.refresh.setTitle("Status Code:\(error.asAFError?.responseCode ?? 200)", for: .normal)
+                    self?.refresh.isHidden = false
+                })
+            .disposed(by: disposeBag)
 
         self.refresh.rx.tap.subscribe{ _ in
             self.refresh.isHidden = true
             self.viewModel.fetchPokeList(param: AppConstant.paramList[self.version])
         }.disposed(by: disposeBag)
-        self.viewModel.error.subscribe(onNext: { error in
-            self.refresh.setTitle("Status Code:\(error.asAFError?.responseCode ?? 200)", for: .normal)
-            self.refresh.isHidden = false
-        }).disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
