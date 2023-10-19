@@ -17,6 +17,7 @@ class ListViewController: UIViewController {
     static let identifier = "listViewController"
 
     @IBOutlet private weak var pokemonTable: UITableView!
+    @IBOutlet private weak var refresh: UIButton!
 
     private let viewModel = ListViewModel()
     private let disposeBag = DisposeBag()
@@ -37,6 +38,15 @@ class ListViewController: UIViewController {
                 self?.selected = Int(model.url.lastPathComponent)!
                 self?.performSegue(withIdentifier: DetailViewController.identifier, sender: nil)
             }).disposed(by: disposeBag)
+
+        self.viewModel.pokemons.subscribe(onError: { error in
+            self.refresh.setTitle("Status Code: \(error.asAFError?.responseCode ?? 200)", for: .normal)
+            self.refresh.isHidden = false
+        }).disposed(by: disposeBag)
+        self.refresh.rx.tap.subscribe { _ in
+            self.refresh.isHidden = true
+            self.viewModel.fetchPokeList(param: AppConstant.paramList[self.version])
+        }.disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -128,10 +128,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-lT-y2S">
+                                <rect key="frame" x="106.33333333333333" y="409" width="180.33333333333337" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system" title="Status Code: 200">
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z4c-9g-IRc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cMA-lT-y2S" firstAttribute="centerX" secondItem="NyX-0P-nVt" secondAttribute="centerX" id="3qS-uU-Jsl"/>
+                            <constraint firstItem="cMA-lT-y2S" firstAttribute="centerY" secondItem="NyX-0P-nVt" secondAttribute="centerY" id="9MV-VR-efU"/>
                             <constraint firstItem="75h-On-z8r" firstAttribute="leading" secondItem="z4c-9g-IRc" secondAttribute="leading" id="9mc-FS-RdN"/>
                             <constraint firstItem="75h-On-z8r" firstAttribute="top" secondItem="z4c-9g-IRc" secondAttribute="top" constant="8" id="cwZ-Ke-MKA"/>
                             <constraint firstItem="75h-On-z8r" firstAttribute="trailing" secondItem="z4c-9g-IRc" secondAttribute="trailing" id="fNt-1W-d0K"/>
@@ -143,6 +152,7 @@
                     </view>
                     <connections>
                         <outlet property="pokemonTable" destination="75h-On-z8r" id="2Q7-QK-Afe"/>
+                        <outlet property="refresh" destination="cMA-lT-y2S" id="am0-Mv-Kv2"/>
                         <segue destination="QFe-Hw-8E9" kind="presentation" identifier="toDetail" id="6Ff-cM-cru"/>
                     </connections>
                 </viewController>
@@ -160,11 +170,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.97299998998641968" green="0.82400000095367432" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
