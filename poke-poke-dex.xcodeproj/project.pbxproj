@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C909CBB82B0C9EDB001B96CD /* DetailViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909CBB72B0C9EDB001B96CD /* DetailViewModel_Tests.swift */; };
 		C91DD4872AC90FB1002EC78C /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91DD4862AC90FB1002EC78C /* PokemonCell.swift */; };
 		C91DD4942AC96CAA002EC78C /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4922AC96CAA002EC78C /* List.storyboard */; };
 		C91DD4952AC96CAA002EC78C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */; };
@@ -26,7 +27,7 @@
 		C9243FD12AC88C74003EE2FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD02AC88C74003EE2FC /* SceneDelegate.swift */; };
 		C9243FD32AC88C74003EE2FC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FD22AC88C74003EE2FC /* ListViewController.swift */; };
 		C9243FD82AC88C75003EE2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9243FD72AC88C75003EE2FC /* Assets.xcassets */; };
-		C9243FE62AC88C75003EE2FC /* poke_poke_dexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FE52AC88C75003EE2FC /* poke_poke_dexTests.swift */; };
+		C9243FE62AC88C75003EE2FC /* ListViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FE52AC88C75003EE2FC /* ListViewModel_Tests.swift */; };
 		C9243FF02AC88C75003EE2FC /* poke_poke_dexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */; };
 		C9243FF22AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */; };
 		C92FE7A52ACC305F000E799F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92FE7A42ACC305F000E799F /* Detail.storyboard */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C909CBB72B0C9EDB001B96CD /* DetailViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel_Tests.swift; sourceTree = "<group>"; };
 		C91DD4862AC90FB1002EC78C /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		C91DD4922AC96CAA002EC78C /* List.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		C91DD4932AC96CAA002EC78C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		C9243FD72AC88C75003EE2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9243FDC2AC88C75003EE2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9243FE12AC88C75003EE2FC /* poke-poke-dexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poke-poke-dexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9243FE52AC88C75003EE2FC /* poke_poke_dexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexTests.swift; sourceTree = "<group>"; };
+		C9243FE52AC88C75003EE2FC /* ListViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel_Tests.swift; sourceTree = "<group>"; };
 		C9243FEB2AC88C75003EE2FC /* poke-poke-dexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poke-poke-dexUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9243FEF2AC88C75003EE2FC /* poke_poke_dexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexUITests.swift; sourceTree = "<group>"; };
 		C9243FF12AC88C75003EE2FC /* poke_poke_dexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poke_poke_dexUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -204,7 +206,8 @@
 		C9243FE42AC88C75003EE2FC /* poke-poke-dexTests */ = {
 			isa = PBXGroup;
 			children = (
-				C9243FE52AC88C75003EE2FC /* poke_poke_dexTests.swift */,
+				C9243FE52AC88C75003EE2FC /* ListViewModel_Tests.swift */,
+				C909CBB72B0C9EDB001B96CD /* DetailViewModel_Tests.swift */,
 			);
 			path = "poke-poke-dexTests";
 			sourceTree = "<group>";
@@ -441,7 +444,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9243FE62AC88C75003EE2FC /* poke_poke_dexTests.swift in Sources */,
+				C9243FE62AC88C75003EE2FC /* ListViewModel_Tests.swift in Sources */,
+				C909CBB82B0C9EDB001B96CD /* DetailViewModel_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
