@@ -34,6 +34,9 @@
 		C9B173682AD0505A00C14763 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B173672AD0505A00C14763 /* TabViewController.swift */; };
 		C9B1736B2AD0507B00C14763 /* Parchment in Frameworks */ = {isa = PBXBuildFile; productRef = C9B1736A2AD0507B00C14763 /* Parchment */; };
 		C9BA8B962ACC23D90092E924 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA8B952ACC23D90092E924 /* AppConstant.swift */; };
+		C9C380502B0CB54200490AE1 /* RxTest-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C9C3804D2B0CB54200490AE1 /* RxTest-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C9C380542B0CB61A00490AE1 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = C9C380532B0CB61A00490AE1 /* RxTest */; };
+		C9C380562B0CB61F00490AE1 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C9C380552B0CB61F00490AE1 /* RxBlocking */; };
 		C9DD70D72ACC30FC0016E071 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD70D62ACC30FC0016E071 /* DetailViewController.swift */; };
 		C9F1DA112ACD982B0069A63B /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = C9F1DA102ACD982B0069A63B /* DGCharts */; };
 		C9F1DA152ACD9C560069A63B /* StatusChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F1DA142ACD9C560069A63B /* StatusChart.swift */; };
@@ -56,6 +59,20 @@
 			remoteInfo = "poke-poke-dex";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9C3804F2B0CB54200490AE1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9C380502B0CB54200490AE1 /* RxTest-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C909CBB72B0C9EDB001B96CD /* DetailViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel_Tests.swift; sourceTree = "<group>"; };
@@ -107,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C380542B0CB61A00490AE1 /* RxTest in Frameworks */,
+				C9C380562B0CB61F00490AE1 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +302,7 @@
 				C9243FC72AC88C74003EE2FC /* Sources */,
 				C9243FC82AC88C74003EE2FC /* Frameworks */,
 				C9243FC92AC88C74003EE2FC /* Resources */,
+				C9C3804F2B0CB54200490AE1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +318,7 @@
 				C91DD4B52ACAEEE6002EC78C /* SkeletonView */,
 				C9F1DA102ACD982B0069A63B /* DGCharts */,
 				C9B1736A2AD0507B00C14763 /* Parchment */,
+				C9C3804D2B0CB54200490AE1 /* RxTest-Dynamic */,
 			);
 			productName = "poke-poke-dex";
 			productReference = C9243FCB2AC88C74003EE2FC /* poke-poke-dex.app */;
@@ -317,6 +338,10 @@
 				C9243FE32AC88C75003EE2FC /* PBXTargetDependency */,
 			);
 			name = "poke-poke-dexTests";
+			packageProductDependencies = (
+				C9C380532B0CB61A00490AE1 /* RxTest */,
+				C9C380552B0CB61F00490AE1 /* RxBlocking */,
+			);
 			productName = "poke-poke-dexTests";
 			productReference = C9243FE12AC88C75003EE2FC /* poke-poke-dexTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -849,6 +874,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C9B173692AD0507B00C14763 /* XCRemoteSwiftPackageReference "Parchment" */;
 			productName = Parchment;
+		};
+		C9C3804D2B0CB54200490AE1 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
+		C9C380532B0CB61A00490AE1 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		C9C380552B0CB61F00490AE1 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C91DD48B2AC93E20002EC78C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
 		};
 		C9F1DA102ACD982B0069A63B /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;

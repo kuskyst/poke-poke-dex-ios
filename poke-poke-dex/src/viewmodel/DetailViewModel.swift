@@ -12,8 +12,8 @@ import UIKit
 
 class DetailViewModel {
 
-    private let pokeProvider = MoyaProvider<PokeApi>()
-    private let imageProvider = MoyaProvider<ImageApi>()
+    private let pokeProvider: MoyaProvider<PokeApi>
+    private let imageProvider: MoyaProvider<ImageApi>
     private let disposeBag = DisposeBag()
 
     let pokemon = PublishRelay<DetailResponse>()
@@ -23,6 +23,12 @@ class DetailViewModel {
     let fr_shi_img = PublishRelay<UIImage>()
     let bk_def_img = PublishRelay<UIImage>()
     let bk_shi_img = PublishRelay<UIImage>()
+
+    init(pokeProvider: MoyaProvider<PokeApi> = MoyaProvider<PokeApi>(),
+         imageProvider: MoyaProvider<ImageApi> = MoyaProvider<ImageApi>()) {
+        self.pokeProvider = pokeProvider
+        self.imageProvider = imageProvider
+    }
 
     func fetchPokeDetail(id: Int) {
         let provider = MoyaProvider<PokeApi>()

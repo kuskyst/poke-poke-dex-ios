@@ -8,12 +8,8 @@
 | Architecture | MVVM |
 | UI | UIKit, Parchment, SkeletonView, DGCharts |
 | Asynchronous | Moya, RxMoya |
+| Test | RxTest, RxBlocking |
 | etc | RxSwift, RxCocoa |
-
-# Todo List
-- [x] make UI 
-- [ ] classify Dependency Injection
-- [ ] write UnitTest / UITest
 
 # Image
 <img width=150 src="https://github.com/kuskyst/poke-poke-dex-ios/assets/126965999/21025d76-4361-4a25-afe7-ff8c4d46f545">
