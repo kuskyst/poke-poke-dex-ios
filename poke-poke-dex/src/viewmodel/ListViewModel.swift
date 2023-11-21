@@ -12,13 +12,17 @@ import RxMoya
 
 class ListViewModel {
 
+    private let provider: MoyaProvider<PokeApi>
     private let disposeBag = DisposeBag()
 
     let pokemons = PublishSubject<[ListResponse.Results]>()
 
+    init(provider: MoyaProvider<PokeApi> = MoyaProvider<PokeApi>()) {
+        self.provider = provider
+    }
+
     func fetchPokeList(param: ListRequest) {
-        let provider = MoyaProvider<PokeApi>()
-        provider.rx.request(.list(param.limit, param.offset))
+        self.provider.rx.request(.list(param.limit, param.offset))
             .filterSuccessfulStatusCodes()
             .map(ListResponse.self)
             .subscribe(
