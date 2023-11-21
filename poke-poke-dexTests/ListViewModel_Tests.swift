@@ -8,7 +8,7 @@
 import XCTest
 @testable import poke_poke_dex
 
-final class poke_poke_dexTests: XCTestCase {
+final class ListViewModel_Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
