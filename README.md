@@ -8,7 +8,7 @@
 | Architecture | MVVM |
 | UI | UIKit, Parchment, SkeletonView, DGCharts |
 | Asynchronous | Moya, RxMoya |
-| Test | RxTest, RxBlocking |
+| Test | XCTest, RxTest, RxBlocking |
 | etc | RxSwift, RxCocoa |
 
 # Image
